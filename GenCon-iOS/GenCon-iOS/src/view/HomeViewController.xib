@@ -27,7 +27,7 @@
                         <constraint firstAttribute="width" constant="50" id="NKx-eV-Wfq"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                    <state key="normal" title="＋"/>
+                    <state key="normal" image="ic_event_white"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="25"/>
@@ -43,4 +43,7 @@
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_event_white" width="48" height="48"/>
+    </resources>
 </document>
