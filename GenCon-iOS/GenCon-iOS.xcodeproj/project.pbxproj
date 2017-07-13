@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C929F0D21F1710BB00D70717 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0D11F1710BB00D70717 /* HomeViewController.xib */; };
+		C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D31F17123C00D70717 /* CustomUIButton.swift */; };
 		C985279B1F15135C002317EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279A1F15135C002317EB /* AppDelegate.swift */; };
 		C985279D1F15135C002317EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279C1F15135C002317EB /* ViewController.swift */; };
 		C98527A21F15135C002317EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98527A11F15135C002317EB /* Assets.xcassets */; };
@@ -15,8 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C929F0D11F1710BB00D70717 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C929F0D31F17123C00D70717 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		C98527971F15135C002317EB /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C985279C1F15135C002317EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C98527A11F15135C002317EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98527A61F15135C002317EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		C98527AF1F151441002317EB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C929F0D11F1710BB00D70717 /* HomeViewController.xib */,
 				C98527B01F151458002317EB /* LaunchScreen.xib */,
 			);
 			path = view;
@@ -99,6 +104,7 @@
 		C98527B21F151523002317EB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C929F0D31F17123C00D70717 /* CustomUIButton.swift */,
 				C98527B31F15155E002317EB /* CustomUIColor.swift */,
 			);
 			path = model;
@@ -166,6 +172,7 @@
 			files = (
 				C98527B11F151458002317EB /* LaunchScreen.xib in Resources */,
 				C98527A21F15135C002317EB /* Assets.xcassets in Resources */,
+				C929F0D21F1710BB00D70717 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */,
 				C985279D1F15135C002317EB /* ViewController.swift in Sources */,
 				C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */,
 				C985279B1F15135C002317EB /* AppDelegate.swift in Sources */,
