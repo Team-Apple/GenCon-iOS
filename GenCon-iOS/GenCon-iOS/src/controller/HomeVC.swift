@@ -12,6 +12,9 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let HomeV:HomeV = UINib(nibName: "HomeV", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! HomeV
+        HomeV.delegate = self
+        self.view = HomeV
     }
 
     override func didReceiveMemoryWarning() {

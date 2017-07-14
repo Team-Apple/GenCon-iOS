@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0D11F1710BB00D70717 /* HomeV.xib */; };
 		C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D31F17123C00D70717 /* CustomUIButton.swift */; };
-		C929F0D71F190DD200D70717 /* HomeVC+ToSetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */; };
+		C929F0D71F190DD200D70717 /* HomeVC+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D61F190DD200D70717 /* HomeVC+Action.swift */; };
 		C929F0D91F19125900D70717 /* HomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D81F19125900D70717 /* HomeV.swift */; };
 		C985279B1F15135C002317EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279A1F15135C002317EB /* AppDelegate.swift */; };
 		C985279D1F15135C002317EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279C1F15135C002317EB /* HomeVC.swift */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		C929F0D11F1710BB00D70717 /* HomeV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeV.xib; sourceTree = "<group>"; };
 		C929F0D31F17123C00D70717 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
-		C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+ToSetEvent.swift"; sourceTree = "<group>"; };
+		C929F0D61F190DD200D70717 /* HomeVC+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+Action.swift"; sourceTree = "<group>"; };
 		C929F0D81F19125900D70717 /* HomeV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
 		C98527971F15135C002317EB /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,9 +46,8 @@
 		C929F0D51F190CF200D70717 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */,
+				C929F0D61F190DD200D70717 /* HomeVC+Action.swift */,
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -103,7 +102,6 @@
 			children = (
 				C985279C1F15135C002317EB /* HomeVC.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -114,7 +112,6 @@
 				C929F0D11F1710BB00D70717 /* HomeV.xib */,
 				C98527B01F151458002317EB /* LaunchScreen.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -124,7 +121,6 @@
 				C929F0D31F17123C00D70717 /* CustomUIButton.swift */,
 				C98527B31F15155E002317EB /* CustomUIColor.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -205,7 +201,7 @@
 				C929F0D91F19125900D70717 /* HomeV.swift in Sources */,
 				C985279D1F15135C002317EB /* HomeVC.swift in Sources */,
 				C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */,
-				C929F0D71F190DD200D70717 /* HomeVC+ToSetEvent.swift in Sources */,
+				C929F0D71F190DD200D70717 /* HomeVC+Action.swift in Sources */,
 				C985279B1F15135C002317EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

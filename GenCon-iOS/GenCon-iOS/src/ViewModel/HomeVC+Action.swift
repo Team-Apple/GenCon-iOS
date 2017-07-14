@@ -8,6 +8,8 @@
 
 import UIKit
 
-extension HomeVC {
-    
+extension HomeVC: HomeVDelegate {
+    func buttonTap() {
+        print("画面遷移する")
+    }
 }

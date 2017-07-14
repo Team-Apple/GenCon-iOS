@@ -11,10 +11,12 @@ import UIKit
 import UIKit
 
 class HomeV: UIView {
+    weak var delegate: HomeVDelegate! = nil
+    
     @IBAction func toSetting(_ sender: Any) {
-        delegate?.buttonTap(bool: true , sender: self)
+        delegate.buttonTap()
     }
 }
-protocol CustomViewDelegate: class {
-    func buttonTap(bool:Bool,sender:HomeV)
+protocol HomeVDelegate: class {
+    func buttonTap()
 }
