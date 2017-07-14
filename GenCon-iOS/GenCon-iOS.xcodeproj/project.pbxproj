@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C929F0D21F1710BB00D70717 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0D11F1710BB00D70717 /* HomeViewController.xib */; };
+		C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0D11F1710BB00D70717 /* HomeV.xib */; };
 		C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D31F17123C00D70717 /* CustomUIButton.swift */; };
+		C929F0D71F190DD200D70717 /* HomeVC+ToSetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */; };
+		C929F0D91F19125900D70717 /* HomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D81F19125900D70717 /* HomeV.swift */; };
 		C985279B1F15135C002317EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279A1F15135C002317EB /* AppDelegate.swift */; };
-		C985279D1F15135C002317EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279C1F15135C002317EB /* ViewController.swift */; };
+		C985279D1F15135C002317EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279C1F15135C002317EB /* HomeVC.swift */; };
 		C98527A21F15135C002317EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98527A11F15135C002317EB /* Assets.xcassets */; };
 		C98527B11F151458002317EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98527B01F151458002317EB /* LaunchScreen.xib */; };
 		C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98527B31F15155E002317EB /* CustomUIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C929F0D11F1710BB00D70717 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C929F0D11F1710BB00D70717 /* HomeV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeV.xib; sourceTree = "<group>"; };
 		C929F0D31F17123C00D70717 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+ToSetEvent.swift"; sourceTree = "<group>"; };
+		C929F0D81F19125900D70717 /* HomeV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
 		C98527971F15135C002317EB /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C985279C1F15135C002317EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C985279C1F15135C002317EB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C98527A11F15135C002317EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98527A61F15135C002317EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98527B01F151458002317EB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C929F0D51F190CF200D70717 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C929F0D61F190DD200D70717 /* HomeVC+ToSetEvent.swift */,
+			);
+			name = ViewModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C985278E1F15135C002317EB = {
 			isa = PBXGroup;
 			children = (
@@ -76,38 +89,43 @@
 		C98527AD1F1513D7002317EB /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C98527AE1F151435002317EB /* controller */,
-				C98527B21F151523002317EB /* model */,
-				C98527AF1F151441002317EB /* view */,
+				C98527AE1F151435002317EB /* Controller */,
+				C98527B21F151523002317EB /* Model */,
+				C98527AF1F151441002317EB /* View */,
+				C929F0D51F190CF200D70717 /* ViewModel */,
 				C985279A1F15135C002317EB /* AppDelegate.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		C98527AE1F151435002317EB /* controller */ = {
+		C98527AE1F151435002317EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C985279C1F15135C002317EB /* ViewController.swift */,
+				C985279C1F15135C002317EB /* HomeVC.swift */,
 			);
-			path = controller;
+			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		C98527AF1F151441002317EB /* view */ = {
+		C98527AF1F151441002317EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C929F0D11F1710BB00D70717 /* HomeViewController.xib */,
+				C929F0D81F19125900D70717 /* HomeV.swift */,
+				C929F0D11F1710BB00D70717 /* HomeV.xib */,
 				C98527B01F151458002317EB /* LaunchScreen.xib */,
 			);
-			path = view;
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
-		C98527B21F151523002317EB /* model */ = {
+		C98527B21F151523002317EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C929F0D31F17123C00D70717 /* CustomUIButton.swift */,
 				C98527B31F15155E002317EB /* CustomUIColor.swift */,
 			);
-			path = model;
+			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +190,7 @@
 			files = (
 				C98527B11F151458002317EB /* LaunchScreen.xib in Resources */,
 				C98527A21F15135C002317EB /* Assets.xcassets in Resources */,
-				C929F0D21F1710BB00D70717 /* HomeViewController.xib in Resources */,
+				C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */,
-				C985279D1F15135C002317EB /* ViewController.swift in Sources */,
+				C929F0D91F19125900D70717 /* HomeV.swift in Sources */,
+				C985279D1F15135C002317EB /* HomeVC.swift in Sources */,
 				C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */,
+				C929F0D71F190DD200D70717 /* HomeVC+ToSetEvent.swift in Sources */,
 				C985279B1F15135C002317EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
