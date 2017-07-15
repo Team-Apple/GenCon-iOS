@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 class HomeV: UIView {
     weak var delegate: HomeVDelegate! = nil
     
@@ -17,6 +15,7 @@ class HomeV: UIView {
         delegate.buttonTap()
     }
 }
+
 protocol HomeVDelegate: class {
     func buttonTap()
 }

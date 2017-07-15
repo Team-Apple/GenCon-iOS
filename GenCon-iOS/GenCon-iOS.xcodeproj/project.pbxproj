@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0D11F1710BB00D70717 /* HomeV.xib */; };
-		C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D31F17123C00D70717 /* CustomUIButton.swift */; };
 		C929F0D71F190DD200D70717 /* HomeVC+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D61F190DD200D70717 /* HomeVC+Action.swift */; };
 		C929F0D91F19125900D70717 /* HomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0D81F19125900D70717 /* HomeV.swift */; };
+		C929F0DF1F19DF6300D70717 /* AddEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0DD1F19DF6300D70717 /* AddEventVC.swift */; };
+		C929F0E01F19DF6300D70717 /* AddEventV.xib in Resources */ = {isa = PBXBuildFile; fileRef = C929F0DE1F19DF6300D70717 /* AddEventV.xib */; };
+		C929F0E31F19E7CE00D70717 /* AddEventVC+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929F0E21F19E7CE00D70717 /* AddEventVC+Action.swift */; };
 		C985279B1F15135C002317EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279A1F15135C002317EB /* AppDelegate.swift */; };
 		C985279D1F15135C002317EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985279C1F15135C002317EB /* HomeVC.swift */; };
 		C98527A21F15135C002317EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98527A11F15135C002317EB /* Assets.xcassets */; };
@@ -20,9 +22,11 @@
 
 /* Begin PBXFileReference section */
 		C929F0D11F1710BB00D70717 /* HomeV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeV.xib; sourceTree = "<group>"; };
-		C929F0D31F17123C00D70717 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		C929F0D61F190DD200D70717 /* HomeVC+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+Action.swift"; sourceTree = "<group>"; };
 		C929F0D81F19125900D70717 /* HomeV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
+		C929F0DD1F19DF6300D70717 /* AddEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventVC.swift; sourceTree = "<group>"; };
+		C929F0DE1F19DF6300D70717 /* AddEventV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddEventV.xib; path = AddEventV.xib; sourceTree = "<group>"; };
+		C929F0E21F19E7CE00D70717 /* AddEventVC+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddEventVC+Action.swift"; sourceTree = "<group>"; };
 		C98527971F15135C002317EB /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C985279C1F15135C002317EB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -46,9 +50,28 @@
 		C929F0D51F190CF200D70717 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C929F0E21F19E7CE00D70717 /* AddEventVC+Action.swift */,
 				C929F0D61F190DD200D70717 /* HomeVC+Action.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C929F0DC1F19CBFD00D70717 /* HomeV */ = {
+			isa = PBXGroup;
+			children = (
+				C929F0D81F19125900D70717 /* HomeV.swift */,
+				C929F0D11F1710BB00D70717 /* HomeV.xib */,
+			);
+			path = HomeV;
+			sourceTree = "<group>";
+		};
+		C929F0E11F19DFA600D70717 /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C929F0DE1F19DF6300D70717 /* AddEventV.xib */,
+			);
+			name = AddEvent;
+			path = AddEvent;
 			sourceTree = "<group>";
 		};
 		C985278E1F15135C002317EB = {
@@ -100,6 +123,7 @@
 		C98527AE1F151435002317EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C929F0DD1F19DF6300D70717 /* AddEventVC.swift */,
 				C985279C1F15135C002317EB /* HomeVC.swift */,
 			);
 			path = Controller;
@@ -108,8 +132,8 @@
 		C98527AF1F151441002317EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C929F0D81F19125900D70717 /* HomeV.swift */,
-				C929F0D11F1710BB00D70717 /* HomeV.xib */,
+				C929F0E11F19DFA600D70717 /* AddEvent */,
+				C929F0DC1F19CBFD00D70717 /* HomeV */,
 				C98527B01F151458002317EB /* LaunchScreen.xib */,
 			);
 			path = View;
@@ -118,7 +142,6 @@
 		C98527B21F151523002317EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C929F0D31F17123C00D70717 /* CustomUIButton.swift */,
 				C98527B31F15155E002317EB /* CustomUIColor.swift */,
 			);
 			path = Model;
@@ -187,6 +210,7 @@
 				C98527B11F151458002317EB /* LaunchScreen.xib in Resources */,
 				C98527A21F15135C002317EB /* Assets.xcassets in Resources */,
 				C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */,
+				C929F0E01F19DF6300D70717 /* AddEventV.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,12 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C929F0D41F17123C00D70717 /* CustomUIButton.swift in Sources */,
 				C929F0D91F19125900D70717 /* HomeV.swift in Sources */,
 				C985279D1F15135C002317EB /* HomeVC.swift in Sources */,
+				C929F0DF1F19DF6300D70717 /* AddEventVC.swift in Sources */,
 				C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */,
 				C929F0D71F190DD200D70717 /* HomeVC+Action.swift in Sources */,
 				C985279B1F15135C002317EB /* AppDelegate.swift in Sources */,
+				C929F0E31F19E7CE00D70717 /* AddEventVC+Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

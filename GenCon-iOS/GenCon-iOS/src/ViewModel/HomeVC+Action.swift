@@ -10,6 +10,9 @@ import UIKit
 
 extension HomeVC: HomeVDelegate {
     func buttonTap() {
-        print("画面遷移する")
+        let vc = AddEventVC()
+        let modalView = UINavigationController(rootViewController: vc)
+        modalView.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        self.view.window?.rootViewController!.present(modalView, animated: true, completion: nil)
     }
 }

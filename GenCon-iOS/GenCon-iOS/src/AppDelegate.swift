@@ -18,7 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = HomeVC()
         window!.makeKeyAndVisible()
+        setUpAppearance()
         return true
+    }
+    
+    func setUpAppearance() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = UIColor.hex(hexStr: "#EEEEEE", alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
+        UINavigationBar.appearance().tintColor = UIColor.hex(hexStr: "555555", alpha: 1.0)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
