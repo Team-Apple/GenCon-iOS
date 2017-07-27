@@ -9,13 +9,15 @@
 import UIKit
 
 class HomeV: UIView {
-    weak var delegate: HomeVDelegate! = nil
+    @IBOutlet weak var webView: UIWebView!
     
-    @IBAction func toSetting(_ sender: Any) {
-        delegate.buttonTap()
+    func loadRequest() {
+        webView.scrollView.bounces = false
+        webView.dataDetectorTypes = []
+        let fileName: String = "index"
+        let filePath: String = Bundle.main.path(forResource: fileName, ofType: "html")!
+        let url = NSURL(string: filePath)!
+        let urlRequest = NSURLRequest(url: url as URL)
+        webView.loadRequest(urlRequest as URLRequest)
     }
-}
-
-protocol HomeVDelegate: class {
-    func buttonTap()
 }

@@ -18,6 +18,9 @@
 		C98527A21F15135C002317EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98527A11F15135C002317EB /* Assets.xcassets */; };
 		C98527B11F151458002317EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98527B01F151458002317EB /* LaunchScreen.xib */; };
 		C98527B41F15155E002317EB /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98527B31F15155E002317EB /* CustomUIColor.swift */; };
+		C9FF62891F298659002389B5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = C9FF62881F298659002389B5 /* index.html */; };
+		C9FF628B1F298B34002389B5 /* jquery.calendar.js in Resources */ = {isa = PBXBuildFile; fileRef = C9FF628A1F298B34002389B5 /* jquery.calendar.js */; };
+		C9FF628D1F29B716002389B5 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = C9FF628C1F29B716002389B5 /* style.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,7 @@
 		C929F0D61F190DD200D70717 /* HomeVC+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+Action.swift"; sourceTree = "<group>"; };
 		C929F0D81F19125900D70717 /* HomeV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
 		C929F0DD1F19DF6300D70717 /* AddEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventVC.swift; sourceTree = "<group>"; };
-		C929F0DE1F19DF6300D70717 /* AddEventV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddEventV.xib; path = AddEventV.xib; sourceTree = "<group>"; };
+		C929F0DE1F19DF6300D70717 /* AddEventV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventV.xib; sourceTree = "<group>"; };
 		C929F0E21F19E7CE00D70717 /* AddEventVC+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddEventVC+Action.swift"; sourceTree = "<group>"; };
 		C98527971F15135C002317EB /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C985279A1F15135C002317EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		C98527A61F15135C002317EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98527B01F151458002317EB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C98527B31F15155E002317EB /* CustomUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIColor.swift; sourceTree = "<group>"; };
+		C9FF62881F298659002389B5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		C9FF628A1F298B34002389B5 /* jquery.calendar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.calendar.js; sourceTree = "<group>"; };
+		C9FF628C1F29B716002389B5 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 			children = (
 				C929F0D81F19125900D70717 /* HomeV.swift */,
 				C929F0D11F1710BB00D70717 /* HomeV.xib */,
+				C9FF62881F298659002389B5 /* index.html */,
+				C9FF628A1F298B34002389B5 /* jquery.calendar.js */,
+				C9FF628C1F29B716002389B5 /* style.css */,
 			);
 			path = HomeV;
 			sourceTree = "<group>";
@@ -70,7 +79,6 @@
 			children = (
 				C929F0DE1F19DF6300D70717 /* AddEventV.xib */,
 			);
-			name = AddEvent;
 			path = AddEvent;
 			sourceTree = "<group>";
 		};
@@ -207,6 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FF62891F298659002389B5 /* index.html in Resources */,
+				C9FF628B1F298B34002389B5 /* jquery.calendar.js in Resources */,
+				C9FF628D1F29B716002389B5 /* style.css in Resources */,
 				C98527B11F151458002317EB /* LaunchScreen.xib in Resources */,
 				C98527A21F15135C002317EB /* Assets.xcassets in Resources */,
 				C929F0D21F1710BB00D70717 /* HomeV.xib in Resources */,

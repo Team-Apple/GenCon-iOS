@@ -8,11 +8,8 @@
 
 import UIKit
 
-extension HomeVC: HomeVDelegate {
-    func buttonTap() {
-        let vc = AddEventVC()
-        let modalView = UINavigationController(rootViewController: vc)
-        modalView.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        self.view.window?.rootViewController!.present(modalView, animated: true, completion: nil)
+extension HomeVC {
+    @IBAction func toSetting(_ sender: Any) {
+        
     }
 }

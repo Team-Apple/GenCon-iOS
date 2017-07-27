@@ -15,25 +15,43 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-71-p23">
-                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eDf-Vd-KFb"/>
-                        <barButtonItem image="ic_event_white" id="agv-WY-oHd">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="toSetting:" destination="iN0-l3-epB" id="gN5-qE-cTx"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BpU-sT-Ys9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-lQ-DsD">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </webView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-71-p23">
+                            <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="eDf-Vd-KFb"/>
+                                <barButtonItem image="ic_event_white" id="agv-WY-oHd">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="toSetting:" destination="iN0-l3-epB" id="gN5-qE-cTx"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="M1d-71-p23" secondAttribute="trailing" id="71L-s6-wJr"/>
+                        <constraint firstAttribute="bottom" secondItem="M1d-71-p23" secondAttribute="bottom" id="mgL-Ey-oWV"/>
+                        <constraint firstItem="M1d-71-p23" firstAttribute="leading" secondItem="BpU-sT-Ys9" secondAttribute="leading" id="rJU-yM-Sha"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="M1d-71-p23" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9y5-Bg-LcZ"/>
-                <constraint firstAttribute="bottom" secondItem="M1d-71-p23" secondAttribute="bottom" id="F1A-BD-PPi"/>
-                <constraint firstAttribute="trailing" secondItem="M1d-71-p23" secondAttribute="trailing" id="IjT-yE-lJZ"/>
+                <constraint firstItem="BpU-sT-Ys9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="06E-Mk-Mod"/>
+                <constraint firstAttribute="trailing" secondItem="BpU-sT-Ys9" secondAttribute="trailing" id="LXL-Bk-hzl"/>
+                <constraint firstItem="BpU-sT-Ys9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wua-tk-nQq"/>
+                <constraint firstAttribute="bottom" secondItem="BpU-sT-Ys9" secondAttribute="bottom" id="fwy-so-hcA"/>
             </constraints>
+            <connections>
+                <outlet property="webView" destination="dWx-lQ-DsD" id="z4w-yM-aNh"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
