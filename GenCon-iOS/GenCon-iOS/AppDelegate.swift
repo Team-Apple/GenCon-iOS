@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GenCon-iOS
 //
-//  Created by Taillook on 2017/07/11.
+//  Created by Taillook on 2017/10/05.
 //  Copyright © 2017年 Taillook. All rights reserved.
 //
 
@@ -15,20 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = UINavigationController(rootViewController: HomeVC())
-        window!.makeKeyAndVisible()
-        setUpAppearance()
+        // Override point for customization after application launch.
         return true
-    }
-    
-    func setUpAppearance() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = UIColor.hex(hexStr: "#EEEEEE", alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
-        UINavigationBar.appearance().tintColor = UIColor.hex(hexStr: "555555", alpha: 1.0)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
