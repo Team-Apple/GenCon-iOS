@@ -12,6 +12,9 @@
 		C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D73091F85C8A9000AFE6C /* Main.storyboard */; };
 		C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93D730C1F85C8A9000AFE6C /* Assets.xcassets */; };
 		C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */; };
+		C9E9F7FE1F984C3300C0E696 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */; };
+		C9E9F8001F984C8800C0E696 /* TomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */; };
+		C9E9F8021F98AE0600C0E696 /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* CustomUIColor.swift */; };
 		CD087F2C8A6E7443FDBB3683 /* Pods_GenCon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		C93D730C1F85C8A9000AFE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C93D730F1F85C8A9000AFE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93D73111F85C8A9000AFE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowViewController.swift; sourceTree = "<group>"; };
+		C9E9F8011F98AE0600C0E696 /* CustomUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIColor.swift; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,9 @@
 			children = (
 				C93D73051F85C8A9000AFE6C /* AppDelegate.swift */,
 				C93D73071F85C8A9000AFE6C /* ViewController.swift */,
+				C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */,
+				C9E9F8011F98AE0600C0E696 /* CustomUIColor.swift */,
+				C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */,
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C93D730C1F85C8A9000AFE6C /* Assets.xcassets */,
 				C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */,
@@ -168,11 +177,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -219,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E9F8021F98AE0600C0E696 /* CustomUIColor.swift in Sources */,
 				C93D73081F85C8A9000AFE6C /* ViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,
+				C9E9F7FE1F984C3300C0E696 /* TodayViewController.swift in Sources */,
+				C9E9F8001F984C8800C0E696 /* TomorrowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

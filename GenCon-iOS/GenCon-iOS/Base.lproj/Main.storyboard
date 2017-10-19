@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sOh-Q4-Im3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PXQ-bK-Nhr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,37 +9,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GenCon-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="GenCon" id="EET-ok-q1a"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="754" y="131"/>
-        </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bza-He-i0i">
+        <scene sceneID="oY5-Lb-17j">
             <objects>
-                <navigationController id="sOh-Q4-Im3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hK3-3p-Myy">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvJ-4f-gny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="PXQ-bK-Nhr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="POl-fT-B4b">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vsM-Cw-WXZ"/>
+                        <segue destination="TPn-2a-DSC" kind="relationship" relationship="rootViewController" id="SU0-xg-VIf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C0h-dB-CqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="131"/>
+            <point key="canvasLocation" x="-1433" y="489"/>
+        </scene>
+        <!--GenCon-->
+        <scene sceneID="pDZ-n5-XC3">
+            <objects>
+                <viewController id="TPn-2a-DSC" customClass="ViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HHf-kk-2vX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="0g3-tu-Ict"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GenCon" id="wo4-rv-buN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRA-6u-srM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719.20000000000005" y="488.90554722638683"/>
+        </scene>
+        <!--GenCon-->
+        <scene sceneID="UdZ-td-1vk">
+            <objects>
+                <viewController storyboardIdentifier="TodayViewController" id="42C-3n-Amx" customClass="TodayViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NN-p9-i3o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="STW-kd-a7u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GenCon" id="kR2-wr-VC6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRm-SS-63i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="489"/>
+        </scene>
+        <!--GenCon-->
+        <scene sceneID="CoB-40-RqS">
+            <objects>
+                <viewController storyboardIdentifier="TomorrowViewController" id="J1E-F1-4Wl" customClass="TomorrowViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0p-e3-Sba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BjK-jo-n0g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GenCon" id="Oqr-cE-VxG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnP-JR-z1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="489"/>
         </scene>
     </scenes>
 </document>
