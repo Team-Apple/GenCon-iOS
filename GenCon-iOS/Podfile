@@ -8,5 +8,5 @@ target 'GenCon-iOS' do
   # Pods for GenCon-iOS
   pod 'ObjectMapper'
   pod 'Alamofire'
-  pod 'PagingMenuController'
+  pod 'Koyomi'
 end
