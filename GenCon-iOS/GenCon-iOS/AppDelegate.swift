@@ -13,9 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let statusBarWindow = UIApplication.shared.value(forKey: "statusBarWindow") as? UIView {
+            let statusBar = statusBarWindow.subviews[0]
+            statusBar.backgroundColor = UIColor.hex(hexStr: "00695c", alpha: 1.0)
+        }
         return true
     }
 

@@ -9,4 +9,6 @@ target 'GenCon-iOS' do
   pod 'ObjectMapper'
   pod 'Alamofire'
   pod 'Koyomi'
+  pod 'RxCocoa'
+  pod 'RxSwift'
 end

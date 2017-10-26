@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE661FA1791B001D5B97 /* CalendarViewController.swift */; };
+		C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */; };
+		C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6F1FA18084001D5B97 /* EventViewModel.swift */; };
+		C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE731FA18264001D5B97 /* TaskViewController.swift */; };
+		C938EE7C1FA18265001D5B97 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE751FA18264001D5B97 /* TaskViewModel.swift */; };
+		C938EE7D1FA18265001D5B97 /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE781FA18265001D5B97 /* AnnounceViewController.swift */; };
+		C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE7A1FA18265001D5B97 /* AnnounceViewModel.swift */; };
 		C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93D73051F85C8A9000AFE6C /* AppDelegate.swift */; };
-		C93D73081F85C8A9000AFE6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93D73071F85C8A9000AFE6C /* ViewController.swift */; };
 		C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D73091F85C8A9000AFE6C /* Main.storyboard */; };
 		C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93D730C1F85C8A9000AFE6C /* Assets.xcassets */; };
 		C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */; };
-		C9C391D41F9A40B700339A11 /* PagingMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C391D31F9A40B700339A11 /* PagingMenuOptions.swift */; };
-		C9E9F7FE1F984C3300C0E696 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */; };
-		C9E9F8001F984C8800C0E696 /* TomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */; };
+		C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
 		CD087F2C8A6E7443FDBB3683 /* Pods_GenCon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -22,16 +26,20 @@
 /* Begin PBXFileReference section */
 		6CF7742387EDBDFB713ECC1F /* Pods-GenCon-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenCon_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C938EE661FA1791B001D5B97 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		C938EE6F1FA18084001D5B97 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		C938EE731FA18264001D5B97 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		C938EE751FA18264001D5B97 /* TaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		C938EE781FA18265001D5B97 /* AnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
+		C938EE7A1FA18265001D5B97 /* AnnounceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceViewModel.swift; sourceTree = "<group>"; };
 		C93D73021F85C8A9000AFE6C /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93D73051F85C8A9000AFE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C93D73071F85C8A9000AFE6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C93D730A1F85C8A9000AFE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C93D730C1F85C8A9000AFE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C93D730F1F85C8A9000AFE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93D73111F85C8A9000AFE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9C391D31F9A40B700339A11 /* PagingMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuOptions.swift; sourceTree = "<group>"; };
-		C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowViewController.swift; sourceTree = "<group>"; };
+		C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,13 +65,104 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C938EE651FA1791B001D5B97 /* CalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE681FA17C36001D5B97 /* View */,
+			);
+			path = CalendarViewController;
+			sourceTree = "<group>";
+		};
+		C938EE681FA17C36001D5B97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE661FA1791B001D5B97 /* CalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C938EE6A1FA17C49001D5B97 /* EventView */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE6B1FA17C99001D5B97 /* View */,
+				C938EE6E1FA18066001D5B97 /* ViewModel */,
+			);
+			path = EventView;
+			sourceTree = "<group>";
+		};
+		C938EE6B1FA17C99001D5B97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C938EE6E1FA18066001D5B97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE6F1FA18084001D5B97 /* EventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C938EE711FA18264001D5B97 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE721FA18264001D5B97 /* View */,
+				C938EE741FA18264001D5B97 /* ViewModel */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		C938EE721FA18264001D5B97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE731FA18264001D5B97 /* TaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C938EE741FA18264001D5B97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE751FA18264001D5B97 /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C938EE761FA18265001D5B97 /* AnnounceView */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE771FA18265001D5B97 /* View */,
+				C938EE791FA18265001D5B97 /* ViewModel */,
+			);
+			path = AnnounceView;
+			sourceTree = "<group>";
+		};
+		C938EE771FA18265001D5B97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE781FA18265001D5B97 /* AnnounceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C938EE791FA18265001D5B97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C938EE7A1FA18265001D5B97 /* AnnounceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C93D72F91F85C8A9000AFE6C = {
 			isa = PBXGroup;
 			children = (
-				C93D73041F85C8A9000AFE6C /* GenCon-iOS */,
-				C93D73031F85C8A9000AFE6C /* Products */,
-				821B1DCE6F9FC0115891E6F4 /* Pods */,
 				FBE08FCC3D77233FBDEAA48C /* Frameworks */,
+				C93D73041F85C8A9000AFE6C /* GenCon-iOS */,
+				821B1DCE6F9FC0115891E6F4 /* Pods */,
+				C93D73031F85C8A9000AFE6C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,18 +177,27 @@
 		C93D73041F85C8A9000AFE6C /* GenCon-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C938EE761FA18265001D5B97 /* AnnounceView */,
+				C938EE711FA18264001D5B97 /* TaskView */,
+				C938EE651FA1791B001D5B97 /* CalendarViewController */,
+				C9429AFA1FA0D30A009DE5A8 /* Common */,
+				C938EE6A1FA17C49001D5B97 /* EventView */,
 				C93D73051F85C8A9000AFE6C /* AppDelegate.swift */,
-				C93D73071F85C8A9000AFE6C /* ViewController.swift */,
-				C9C391D31F9A40B700339A11 /* PagingMenuOptions.swift */,
-				C9E9F7FD1F984C3300C0E696 /* TodayViewController.swift */,
-				C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */,
-				C9E9F7FF1F984C8800C0E696 /* TomorrowViewController.swift */,
-				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C93D730C1F85C8A9000AFE6C /* Assets.xcassets */,
-				C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */,
 				C93D73111F85C8A9000AFE6C /* Info.plist */,
+				C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */,
+				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 			);
 			path = "GenCon-iOS";
+			sourceTree = "<group>";
+		};
+		C9429AFA1FA0D30A009DE5A8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */,
+				C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		FBE08FCC3D77233FBDEAA48C /* Frameworks */ = {
@@ -181,12 +289,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Koyomi/Koyomi.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koyomi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -233,12 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */,
+				C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */,
+				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
+				C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */,
 				C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */,
-				C9C391D41F9A40B700339A11 /* PagingMenuOptions.swift in Sources */,
-				C93D73081F85C8A9000AFE6C /* ViewController.swift in Sources */,
+				C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */,
+				C938EE7D1FA18265001D5B97 /* AnnounceViewController.swift in Sources */,
+				C938EE7C1FA18265001D5B97 /* TaskViewModel.swift in Sources */,
+				C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,
-				C9E9F7FE1F984C3300C0E696 /* TodayViewController.swift in Sources */,
-				C9E9F8001F984C8800C0E696 /* TomorrowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +367,7 @@
 				C93D730A1F85C8A9000AFE6C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */ = {
@@ -259,6 +376,7 @@
 				C93D730F1F85C8A9000AFE6C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

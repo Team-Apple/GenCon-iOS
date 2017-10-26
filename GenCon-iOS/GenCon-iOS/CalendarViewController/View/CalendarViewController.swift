@@ -9,7 +9,7 @@
 import UIKit
 import Koyomi
 
-class ViewController: UIViewController, KoyomiDelegate {
+class CalendarViewController: UIViewController, KoyomiDelegate {
     var isNavTapped = false
     var selectedDateStr = "" {
         didSet {
@@ -26,7 +26,7 @@ class ViewController: UIViewController, KoyomiDelegate {
     }
     let dateFormatter = DateFormatter()
     let titleLabel = UILabel()
-    let koyomi = Koyomi(frame: CGRect(x: 0, y : 0, width: 375, height: 300), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
+    let koyomi = Koyomi(frame: CGRect(x: 0, y : 0, width: DeviceSize.screenWidth, height: 300), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,20 +41,16 @@ class ViewController: UIViewController, KoyomiDelegate {
         titleLabel.text = selectedDateStr
         titleLabel.textColor = UIColor.hex(hexStr: "#ffffff", alpha: 1.0)
         titleLabel.sizeToFit()
-        titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.tapped)))
+        titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CalendarViewController.tapped)))
         titleLabel.isUserInteractionEnabled = true
         self.navigationItem.titleView = titleLabel
-        guard let statusBarWindow = UIApplication.shared.value(forKey: "statusBarWindow") as? UIView else {
-            return
-        }
-        let statusBar = statusBarWindow.subviews[0] as UIView
-        statusBar.backgroundColor = UIColor.hex(hexStr: "00695c", alpha: 1.0)
         
         koyomi.selectionMode = .single(style: .background)
         koyomi.tag = 1
         koyomi.dayBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
         koyomi.weekBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
         koyomi.calendarDelegate = self
+        koyomi.select(date: Date())
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,5 +78,4 @@ class ViewController: UIViewController, KoyomiDelegate {
         isNavTapped = false
         view.viewWithTag(1)?.removeFromSuperview()
     }
-    
 }
