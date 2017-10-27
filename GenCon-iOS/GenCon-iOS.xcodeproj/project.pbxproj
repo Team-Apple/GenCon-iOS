@@ -19,6 +19,7 @@
 		C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93D730C1F85C8A9000AFE6C /* Assets.xcassets */; };
 		C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */; };
 		C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */; };
+		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
 		CD087F2C8A6E7443FDBB3683 /* Pods_GenCon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		C93D730F1F85C8A9000AFE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93D73111F85C8A9000AFE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
+		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 			children = (
 				C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */,
 				C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */,
+				C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */,
 				C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */,
 				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
+				C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */,
 				C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */,
 				C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */,
 				C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */,

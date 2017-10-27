@@ -27,7 +27,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     let dateFormatter = DateFormatter()
     let titleLabel = UILabel()
     let koyomi = Koyomi(frame: CGRect(x: 0, y : 0, width: DeviceSize.screenWidth, height: 300), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedDate = Date()
@@ -35,9 +35,6 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     }
 
     func setUI() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#009688", alpha: 1.0)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
         titleLabel.text = selectedDateStr
         titleLabel.textColor = UIColor.hex(hexStr: "#ffffff", alpha: 1.0)
         titleLabel.sizeToFit()
@@ -52,7 +49,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
         koyomi.calendarDelegate = self
         koyomi.select(date: Date())
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
