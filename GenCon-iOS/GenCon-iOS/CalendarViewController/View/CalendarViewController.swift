@@ -18,7 +18,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     }
     var selectedDateStr = "" {
         didSet {
-            titleLabel.text = selectedDateStr
+            titleLabel.text = selectedDateStr + "▲"
             titleLabel.sizeToFit()
         }
     }
@@ -68,10 +68,6 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
         }else {
             view.addSubview(koyomi)
             isNavTapped = true
-            
-            let date_formatter: DateFormatter = DateFormatter()
-            date_formatter.locale     = Locale(identifier: "ja")
-            date_formatter.dateFormat = "yyyy/MM/dd"
         }
     }
 }
