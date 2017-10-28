@@ -11,4 +11,5 @@ target 'GenCon-iOS' do
   pod 'Koyomi'
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'RxBlocking'
 end

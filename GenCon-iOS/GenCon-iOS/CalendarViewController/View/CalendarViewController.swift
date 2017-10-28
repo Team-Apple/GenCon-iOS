@@ -10,7 +10,12 @@ import UIKit
 import Koyomi
 
 class CalendarViewController: UIViewController, KoyomiDelegate {
-    var isNavTapped = false
+    var isNavTapped = false {
+        didSet {
+            isNavTapped ? (titleLabel.text = selectedDateStr + "▲") : (titleLabel.text = selectedDateStr + "▼")
+            titleLabel.sizeToFit()
+        }
+    }
     var selectedDateStr = "" {
         didSet {
             titleLabel.text = selectedDateStr
@@ -35,7 +40,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     }
 
     func setUI() {
-        titleLabel.text = selectedDateStr
+        titleLabel.text = selectedDateStr + "▼"
         titleLabel.textColor = UIColor.hex(hexStr: "#ffffff", alpha: 1.0)
         titleLabel.sizeToFit()
         titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CalendarViewController.tapped)))
@@ -68,11 +73,5 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
             date_formatter.locale     = Locale(identifier: "ja")
             date_formatter.dateFormat = "yyyy/MM/dd"
         }
-    }
-    
-    func koyomi(_ koyomi: Koyomi, didSelect date: Date?, forItemAt indexPath: IndexPath) {
-        selectedDate = date!
-        isNavTapped = false
-        view.viewWithTag(1)?.removeFromSuperview()
     }
 }

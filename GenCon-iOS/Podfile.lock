@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.5.1)
   - Koyomi (1.2.6)
   - ObjectMapper (3.0.0)
+  - RxBlocking (4.0.0):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
@@ -10,6 +12,7 @@ DEPENDENCIES:
   - Alamofire
   - Koyomi
   - ObjectMapper
+  - RxBlocking
   - RxCocoa
   - RxSwift
 
@@ -17,9 +20,10 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Koyomi: 23b8ab68982d4efe7d7f32ec525e6b04c986db38
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 6a212d920e0bb3daa5605fa8d82940d0f8e31b8d
+PODFILE CHECKSUM: a85f6498d03cf2f52797735997899c62bbb90f75
 
 COCOAPODS: 1.4.0.beta.2
