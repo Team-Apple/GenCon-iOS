@@ -46,9 +46,12 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
             .disposed(by: disposeBag)
         
         viewModel.datas.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier:"Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
-                cell.textLabel!.text = element
-                //(cell.viewWithTag(1) as! UILabel).text = user.name!
+            .bind(to: tableView.rx.items) { (tableView, row, element) in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+                (cell.viewWithTag(1) as! UILabel).text = "焼肉ランチ"
+                (cell.viewWithTag(2) as! UILabel).text = "開始時刻: " + "n時m分"
+                (cell.viewWithTag(3) as! UILabel).text = "終了時刻: " + "n時m分"
+                return cell
             }
             .disposed(by: disposeBag)
         
@@ -63,7 +66,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
     func koyomi(_ koyomi: Koyomi, didSelect date: Date?, forItemAt indexPath: IndexPath) {
         selectedDate = date!
         self.isNavTapped = false
-        view.viewWithTag(1)?.removeFromSuperview()
+        view.viewWithTag(256)?.removeFromSuperview()
         viewModel.updateDatas(date: selectedDateStr)
     }
 }

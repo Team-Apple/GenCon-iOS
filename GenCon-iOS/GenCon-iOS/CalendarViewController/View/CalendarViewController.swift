@@ -48,7 +48,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
         self.navigationItem.titleView = titleLabel
         
         koyomi.selectionMode = .single(style: .background)
-        koyomi.tag = 1
+        koyomi.tag = 256
         koyomi.dayBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
         koyomi.weekBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
         koyomi.calendarDelegate = self
@@ -64,7 +64,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     func tapped(tapGestureRecognizer: UITapGestureRecognizer) {
         if isNavTapped {
             isNavTapped = false
-            view.viewWithTag(1)?.removeFromSuperview()
+            view.viewWithTag(256)?.removeFromSuperview()
         }else {
             view.addSubview(koyomi)
             isNavTapped = true
