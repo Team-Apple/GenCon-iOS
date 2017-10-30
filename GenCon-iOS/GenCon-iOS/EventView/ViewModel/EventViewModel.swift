@@ -20,5 +20,6 @@ struct EventViewModel {
     
     func updateDatas(date: String) {
         datas.value.append(date)
+        Requests().fetchEvents()
     }
 }
