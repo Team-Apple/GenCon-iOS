@@ -20,6 +20,7 @@
 		C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */; };
 		C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */; };
 		C9432D6A1FA7093900C4FB86 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432D691FA7093900C4FB86 /* Requests.swift */; };
+		C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432D6D1FA711CF00C4FB86 /* EventObject.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
 		CD087F2C8A6E7443FDBB3683 /* Pods_GenCon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */; };
@@ -43,6 +44,7 @@
 		C93D73111F85C8A9000AFE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		C9432D691FA7093900C4FB86 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		C9432D6D1FA711CF00C4FB86 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		C938EE6A1FA17C49001D5B97 /* EventView */ = {
 			isa = PBXGroup;
 			children = (
+				C9432D6C1FA7119500C4FB86 /* Model */,
 				C938EE6B1FA17C99001D5B97 /* View */,
 				C938EE6E1FA18066001D5B97 /* ViewModel */,
 			);
@@ -212,6 +215,14 @@
 				C9432D691FA7093900C4FB86 /* Requests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C9432D6C1FA7119500C4FB86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9432D6D1FA711CF00C4FB86 /* EventObject.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FBE08FCC3D77233FBDEAA48C /* Frameworks */ = {
@@ -373,6 +384,7 @@
 				C9432D6A1FA7093900C4FB86 /* Requests.swift in Sources */,
 				C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,
+				C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

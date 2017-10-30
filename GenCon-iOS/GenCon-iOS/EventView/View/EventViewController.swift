@@ -39,9 +39,9 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         
         viewModel.datas.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "Cell")) { (row, element, cell) in
-                (cell.viewWithTag(1) as! UILabel).text = "焼肉ランチ"
-                (cell.viewWithTag(2) as! UILabel).text = "開始時刻: " + "n時m分"
-                (cell.viewWithTag(3) as! UILabel).text = "終了時刻: " + "n時m分"
+                (cell.viewWithTag(1) as! UILabel).text = element.eventTitle
+                (cell.viewWithTag(2) as! UILabel).text = element.startTime
+                (cell.viewWithTag(3) as! UILabel).text = element.endTime
             }
             .disposed(by: disposeBag)
         

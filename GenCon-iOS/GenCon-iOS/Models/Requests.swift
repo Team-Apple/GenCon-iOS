@@ -7,17 +7,15 @@
 //
 
 import Alamofire
+import ObjectMapper
 
 class Requests {
     let baseURL = ""
     
-    func fetchEvents() {
-        Alamofire.request("http://grapebread.net/testevent/event", method: .get, parameters: nil).responseJSON { response in
-            if response.result.isSuccess {
-                print((response.result.value as! [[String: String]])[0]["title"]!)
-            }else{
-                //fail(response.result.error)
-            }
+    func fetchEvents(callback: @escaping ([[String: String]]) -> Void) {
+        Alamofire.request("http://grapebread.net/testevent/event", method: .get, parameters: nil).validate().responseJSON{ response in
+            callback((response.result.value as! [[String: String]]))
         }
     }
+    
 }

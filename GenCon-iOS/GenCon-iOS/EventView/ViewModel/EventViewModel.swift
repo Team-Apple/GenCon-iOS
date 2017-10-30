@@ -7,19 +7,26 @@
 //
 
 import RxSwift
+import ObjectMapper
 
 struct EventViewModel {
-    var datas = Variable<[String]>([])
+    var datas = Variable<[EventObject]>([])
     
     init() {
     }
     
     func selectAtIndex(i: Int) {
-        datas.value.append("a")
+        //datas.value.append("a")
     }
     
     func updateDatas(date: String) {
-        datas.value.append(date)
-        Requests().fetchEvents()
+        Requests().fetchEvents { (json: [[String: String]]) in
+            self.datas.value.removeAll()
+            for item in json {
+                print(item)
+                let eventObject: EventObject = Mapper<EventObject>().map(JSONString: String(data: try! JSONSerialization.data(withJSONObject: item, options: []), encoding: .utf8)!)!
+                self.datas.value.append(eventObject)
+            }
+        }
     }
 }
