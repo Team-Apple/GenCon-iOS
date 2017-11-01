@@ -9,24 +9,22 @@
 import ObjectMapper
 
 class EventObject: Mappable {
-    var eventTitle: String?
-    var startDate:  String?
-    var startTime:  String?
-    var endDate:    String?
-    var endTime:    String?
-    var memo:       String?
-    var priority:   String?
+    var eventTitle:     String?
+    var startDateTime:  String?
+    var endDateTime:    String?
+    var memo:           String?
+    var priority:       String?
+    var id:             String?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        eventTitle  <- map["title"]
-        startDate   <- map["start_at_date"]
-        startTime   <- map["start_at_time"]
-        endDate     <- map["end_at_date"]
-        endTime     <- map["end_at_time"]
-        memo        <- map["memo"]
-        priority    <- map["priority"]
+        eventTitle      <- map["title"]
+        startDateTime   <- map["start_at"]
+        endDateTime     <- map["end_at"]
+        memo            <- map["memo"]
+        priority        <- map["priority"]
+        id              <- map["id"]
     }
 }

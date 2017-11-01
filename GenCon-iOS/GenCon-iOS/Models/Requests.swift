@@ -10,12 +10,15 @@ import Alamofire
 import ObjectMapper
 
 class Requests {
-    let baseURL = ""
+    let baseURL = "https://gencon-web.herokuapp.com/"
     
     func fetchEvents(callback: @escaping ([EventObject]) -> Void) {
-        Alamofire.request("http://grapebread.net/testevent/event", method: .get, parameters: nil).validate().responseJSON{ response in
+        Alamofire.request(baseURL + "events.json", method: .get, parameters: nil).validate().responseJSON{ response in
             var data: [EventObject] = []
-            for item in (response.result.value as! [[String: String]]) {
+            
+            //print(response.result.value as! [[String: Any]])
+            
+            for item in (response.result.value as! [[String: Any]]) {
                 print(item)
                 let eventObject: EventObject = Mapper<EventObject>()
                     .map(JSONString: String(data: try! JSONSerialization.data(withJSONObject: item, options: []), encoding: .utf8)!)!
