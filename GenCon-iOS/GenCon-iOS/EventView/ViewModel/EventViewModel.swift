@@ -13,15 +13,18 @@ struct EventViewModel {
     let request = Requests()
     
     init() {
-        updateDatas(date: "test")
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        updateDatas(date: dateFormatter.string(from: Date()))
     }
-    
+
     func selectAtIndex(i: Int) {
         //datas.value.append("a")
     }
-    
+
     func updateDatas(date: String) {
-        request.fetchEvents { (data: [EventObject]) in
+        request.fetchEvents(startDate: date.replacingOccurrences(of: "/", with: "-")) { (data: [EventObject]) in
             self.datas.value.removeAll()
             self.datas.value = data
         }
