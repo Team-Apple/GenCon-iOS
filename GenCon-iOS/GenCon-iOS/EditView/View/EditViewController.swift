@@ -15,4 +15,8 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true,completion: nil)
+    }
 }
