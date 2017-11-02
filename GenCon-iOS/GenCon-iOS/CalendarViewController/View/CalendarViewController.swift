@@ -41,7 +41,7 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
 
     func setUI() {
         titleLabel.text = selectedDateStr + "▼"
-        titleLabel.textColor = UIColor.hex(hexStr: "#ffffff", alpha: 1.0)
+        titleLabel.textColor = UIColor.white
         titleLabel.sizeToFit()
         titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CalendarViewController.tapped)))
         titleLabel.isUserInteractionEnabled = true
@@ -49,8 +49,8 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
         
         koyomi.selectionMode = .single(style: .background)
         koyomi.tag = 256
-        koyomi.dayBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
-        koyomi.weekBackgrondColor = UIColor.hex(hexStr: "009688", alpha: 1.0)
+        koyomi.dayBackgrondColor = UIColor.main
+        koyomi.weekBackgrondColor = UIColor.main
         koyomi.calendarDelegate = self
         koyomi.select(date: Date())
     }

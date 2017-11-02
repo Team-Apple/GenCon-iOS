@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="vKV-8Q-eEt">
@@ -55,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="-1431" y="489"/>
         </scene>
-        <!--1970/01/01-->
+        <!--Event-->
         <scene sceneID="pDZ-n5-XC3">
             <objects>
                 <viewController id="TPn-2a-DSC" customClass="EventViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,24 +89,24 @@
                                                     <rect key="frame" x="8" y="8" width="359" height="133.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-vy-OwI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="108"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="111.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-Oy-RhE">
-                                                            <rect key="frame" x="0.0" y="113" width="359" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="116.5" width="359" height="17"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" text="開始日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-oK-tqh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終了日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-SU-e1v">
-                                                                    <rect key="frame" x="179.5" y="0.0" width="179.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="179.5" y="0.0" width="179.5" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -133,7 +138,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0g3-tu-Ict"/>
                     </view>
-                    <navigationItem key="navigationItem" title="1970/01/01" id="wo4-rv-buN">
+                    <navigationItem key="navigationItem" title="Event" id="wo4-rv-buN">
                         <barButtonItem key="rightBarButtonItem" image="add" id="EcG-5h-sks">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -150,41 +155,195 @@
             </objects>
             <point key="canvasLocation" x="-1431.2" y="1228.3358320839582"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="lyu-EL-5mo">
             <objects>
-                <viewController id="eZw-Ww-ia7" sceneMemberID="viewController">
+                <viewController id="eZw-Ww-ia7" customClass="EditViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cjf-HW-nyd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="836"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="smq-RO-fy8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="smq-RO-fy8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="787"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUJ-et-GYB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6f-fv-ZV2">
-                                                <rect key="frame" x="20" y="20" width="335" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4uE-Wf-879">
-                                                <rect key="frame" x="20" y="51" width="335" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4uE-Wf-879" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="20" y="30" width="335" height="30"/>
+                                                <color key="tintColor" red="1" green="0.24257426069999999" blue="0.14193532349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862745098038" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerNormalColor">
+                                                        <color key="value" red="0.0" green="0.72156862745098038" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862745098038" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailColor">
+                                                        <color key="value" red="0.0" green="0.72156862745098038" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Title"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="EventTitle"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="nFT-mv-XGh">
+                                                <rect key="frame" x="20" y="221" width="335" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="haE-Z3-ee9"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="5is-VZ-cby">
+                                                <rect key="frame" x="20" y="372" width="335" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="hcY-Ik-1lz"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFJ-Ak-I2k">
+                                                <rect key="frame" x="20" y="190" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRy-t5-pwZ">
+                                                <rect key="frame" x="20" y="341" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-EO-oWg">
+                                                <rect key="frame" x="20" y="523" width="335" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="XSo-nI-oPZ"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xa1-ev-EAd">
+                                                <rect key="frame" x="20" y="674" width="335" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Tl3-B3-qlD"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP5-of-53P">
+                                                <rect key="frame" x="20" y="492" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f8-Az-mV7">
+                                                <rect key="frame" x="20" y="643" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vOE-T5-Hwc" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="20" y="110" width="335" height="30"/>
+                                                <color key="tintColor" red="1" green="0.24257426069999999" blue="0.14193532349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerNormalColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Memo"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="EventMemo"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tnr-EO-oWg" secondAttribute="trailing" constant="20" id="06s-PB-R8Y"/>
+                                            <constraint firstItem="vOE-T5-Hwc" firstAttribute="top" secondItem="4uE-Wf-879" secondAttribute="bottom" constant="50" id="1Qn-8a-bzg"/>
                                             <constraint firstItem="4uE-Wf-879" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="3N9-me-2tA"/>
-                                            <constraint firstAttribute="trailing" secondItem="C6f-fv-ZV2" secondAttribute="trailing" constant="20" id="NFO-Xt-ogo"/>
-                                            <constraint firstItem="C6f-fv-ZV2" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="WQz-65-VMu"/>
-                                            <constraint firstItem="4uE-Wf-879" firstAttribute="top" secondItem="C6f-fv-ZV2" secondAttribute="bottom" constant="10" id="Xul-GK-Zro"/>
+                                            <constraint firstItem="kRy-t5-pwZ" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="3XP-85-WQ1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xa1-ev-EAd" secondAttribute="trailing" constant="20" id="70J-E1-ZJE"/>
+                                            <constraint firstItem="5is-VZ-cby" firstAttribute="top" secondItem="kRy-t5-pwZ" secondAttribute="bottom" constant="10" id="7GV-6h-VON"/>
+                                            <constraint firstItem="4uE-Wf-879" firstAttribute="top" secondItem="wUJ-et-GYB" secondAttribute="top" constant="30" id="G3z-sU-vjH"/>
+                                            <constraint firstItem="vOE-T5-Hwc" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="Gvq-Az-xpc"/>
+                                            <constraint firstItem="kRy-t5-pwZ" firstAttribute="top" secondItem="nFT-mv-XGh" secondAttribute="bottom" constant="20" id="H4z-tF-ShX"/>
+                                            <constraint firstAttribute="trailing" secondItem="5is-VZ-cby" secondAttribute="trailing" constant="20" id="KsP-Sf-0Ud"/>
+                                            <constraint firstAttribute="trailing" secondItem="nFT-mv-XGh" secondAttribute="trailing" constant="20" id="MRR-YI-I5x"/>
+                                            <constraint firstItem="Xa1-ev-EAd" firstAttribute="top" secondItem="1f8-Az-mV7" secondAttribute="bottom" constant="10" id="N3P-y3-pCG"/>
+                                            <constraint firstItem="5is-VZ-cby" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="TDN-3O-kjE"/>
+                                            <constraint firstItem="nFT-mv-XGh" firstAttribute="top" secondItem="tFJ-Ak-I2k" secondAttribute="bottom" constant="10" id="Ttm-RZ-4Mp"/>
+                                            <constraint firstItem="tnr-EO-oWg" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="UNC-kg-Vbx"/>
+                                            <constraint firstItem="tnr-EO-oWg" firstAttribute="top" secondItem="EP5-of-53P" secondAttribute="bottom" constant="10" id="XNY-J3-6Vc"/>
+                                            <constraint firstItem="tFJ-Ak-I2k" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="ciZ-V9-P7g"/>
+                                            <constraint firstItem="1f8-Az-mV7" firstAttribute="top" secondItem="tnr-EO-oWg" secondAttribute="bottom" constant="20" id="e0g-qk-bY1"/>
+                                            <constraint firstAttribute="trailing" secondItem="vOE-T5-Hwc" secondAttribute="trailing" constant="20" id="eJk-eo-W0W"/>
+                                            <constraint firstItem="tFJ-Ak-I2k" firstAttribute="top" secondItem="vOE-T5-Hwc" secondAttribute="bottom" constant="50" id="eOW-df-YSG"/>
                                             <constraint firstAttribute="trailing" secondItem="4uE-Wf-879" secondAttribute="trailing" constant="20" id="hgI-jJ-W9d"/>
-                                            <constraint firstItem="C6f-fv-ZV2" firstAttribute="top" secondItem="wUJ-et-GYB" secondAttribute="top" constant="20" id="iJA-iW-5YH"/>
-                                            <constraint firstAttribute="height" constant="900" id="pGg-Gy-NOH"/>
+                                            <constraint firstItem="EP5-of-53P" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="j0E-mB-Asu"/>
+                                            <constraint firstItem="nFT-mv-XGh" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="jBt-zJ-Vyh"/>
+                                            <constraint firstItem="Xa1-ev-EAd" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="jaf-5A-Nhc"/>
+                                            <constraint firstItem="1f8-Az-mV7" firstAttribute="leading" secondItem="wUJ-et-GYB" secondAttribute="leading" constant="20" id="n4H-w1-i1K"/>
+                                            <constraint firstItem="EP5-of-53P" firstAttribute="top" secondItem="5is-VZ-cby" secondAttribute="bottom" constant="20" id="nBH-en-Wj7"/>
+                                            <constraint firstAttribute="trailing" secondItem="EP5-of-53P" secondAttribute="trailing" constant="20" id="o8C-YM-HCi"/>
+                                            <constraint firstAttribute="height" constant="800" id="pGg-Gy-NOH"/>
+                                            <constraint firstAttribute="trailing" secondItem="1f8-Az-mV7" secondAttribute="trailing" constant="20" id="rmT-M4-eph"/>
+                                            <constraint firstAttribute="trailing" secondItem="kRy-t5-pwZ" secondAttribute="trailing" constant="20" id="sea-kO-dS4"/>
+                                            <constraint firstAttribute="trailing" secondItem="tFJ-Ak-I2k" secondAttribute="trailing" constant="20" id="zET-te-6Mt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -193,7 +352,6 @@
                                     <constraint firstAttribute="trailing" secondItem="wUJ-et-GYB" secondAttribute="trailing" id="3dl-ip-Dwm"/>
                                     <constraint firstItem="wUJ-et-GYB" firstAttribute="width" secondItem="smq-RO-fy8" secondAttribute="width" id="B9n-p1-R12"/>
                                     <constraint firstAttribute="bottom" secondItem="wUJ-et-GYB" secondAttribute="bottom" id="DfD-nI-jSJ"/>
-                                    <constraint firstAttribute="height" constant="900" id="EQA-yh-Jfu"/>
                                     <constraint firstItem="wUJ-et-GYB" firstAttribute="top" secondItem="smq-RO-fy8" secondAttribute="top" id="I8w-6y-KdK"/>
                                     <constraint firstAttribute="bottom" secondItem="wUJ-et-GYB" secondAttribute="bottom" id="hdV-dv-b3h"/>
                                     <constraint firstItem="wUJ-et-GYB" firstAttribute="top" secondItem="smq-RO-fy8" secondAttribute="top" id="tpT-az-3hk"/>
@@ -211,12 +369,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f8q-EY-woz"/>
                     </view>
+                    <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="inputTitle" destination="4uE-Wf-879" id="qEG-Pd-ezK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNi-B2-jAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="1955"/>
+            <point key="canvasLocation" x="-1431.2" y="2159.8200899550225"/>
         </scene>
-        <!--1970/01/01-->
+        <!--Task-->
         <scene sceneID="fca-oq-5gk">
             <objects>
                 <viewController id="hWm-Ls-Amg" customClass="CalendarViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,7 +389,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TPy-Tx-yH8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="1970/01/01" id="o49-UZ-e1P"/>
+                    <navigationItem key="navigationItem" title="Task" id="o49-UZ-e1P"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxl-D8-4Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,6 +405,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -265,6 +428,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -278,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="170" y="489"/>
         </scene>
-        <!--1970/01/01-->
+        <!--Announce-->
         <scene sceneID="41U-k0-RX6">
             <objects>
                 <viewController id="otf-R9-6Wu" customClass="AnnounceViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,7 +453,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="abd-5p-K2D"/>
                     </view>
-                    <navigationItem key="navigationItem" title="1970/01/01" id="Q9t-Bl-6x5"/>
+                    <navigationItem key="navigationItem" title="Announce" id="Q9t-Bl-6x5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLt-L5-J6v" userLabel="First Responder" sceneMemberID="firstResponder"/>

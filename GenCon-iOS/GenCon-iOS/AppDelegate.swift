@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if let statusBarWindow = UIApplication.shared.value(forKey: "statusBarWindow") as? UIView {
             let statusBar = statusBarWindow.subviews[0]
-            statusBar.backgroundColor = UIColor.hex(hexStr: "00695c", alpha: 1.0)
+            statusBar.backgroundColor = UIColor.mainDark
         }
         return true
     }

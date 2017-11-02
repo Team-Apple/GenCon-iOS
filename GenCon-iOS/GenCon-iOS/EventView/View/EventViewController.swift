@@ -13,7 +13,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxBlocking
 import Koyomi
 
 class EventViewController: CalendarViewController, UITableViewDelegate {
