@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jpr-Pm-Q77">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oDP-BX-xIa">
+            <objects>
+                <navigationController id="Jpr-Pm-Q77" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQq-FJ-e7b">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TXE-ch-3DN" kind="relationship" relationship="rootViewController" id="9Jr-xz-JCW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nr-AG-22P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430" y="2037"/>
+        </scene>
+        <!--NewEvent-->
+        <scene sceneID="fne-cv-fXz">
+            <objects>
+                <viewController id="TXE-ch-3DN" customClass="EditViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGG-pw-my4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="2Hf-mH-YnM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="836"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-4f-ebg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fz3-4C-Omw" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="20" y="30" width="335" height="30"/>
+                                                <color key="tintColor" red="1" green="0.24257426069999999" blue="0.14193532349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerNormalColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Title"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="EventTitle"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="K8i-iJ-gtB">
+                                                <rect key="frame" x="60" y="221" width="255" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="RLL-Pb-smB"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="zPS-ZU-hlA">
+                                                <rect key="frame" x="60" y="372" width="255" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="2a6-wB-m6o"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZZ-55-tty">
+                                                <rect key="frame" x="20" y="190" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXt-sq-dOs">
+                                                <rect key="frame" x="20" y="341" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-ri-Y8S">
+                                                <rect key="frame" x="60" y="523" width="255" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="rvw-0p-JXl"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <datePicker multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="a2D-Lb-Akm">
+                                                <rect key="frame" x="60" y="674" width="255" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="iMB-7z-xgV"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="531280359.24083698">
+                                                    <!--2017-11-02 01:52:39 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="ja"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-hc-lRz">
+                                                <rect key="frame" x="20" y="492" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Bp-CrI">
+                                                <rect key="frame" x="20" y="643" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCA-GF-FwZ" customClass="TextField" customModule="Material">
+                                                <rect key="frame" x="20" y="110" width="335" height="30"/>
+                                                <color key="tintColor" red="1" green="0.24257426069999999" blue="0.14193532349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerNormalColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderActiveColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailColor">
+                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Memo"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="EventMemo"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="800" id="07U-f8-qeZ"/>
+                                            <constraint firstItem="K8i-iJ-gtB" firstAttribute="top" secondItem="nZZ-55-tty" secondAttribute="bottom" constant="10" id="1mb-fj-4Rk"/>
+                                            <constraint firstAttribute="trailing" secondItem="HHZ-Bp-CrI" secondAttribute="trailing" constant="20" id="3Kc-Dw-cMa"/>
+                                            <constraint firstItem="Bdw-hc-lRz" firstAttribute="top" secondItem="zPS-ZU-hlA" secondAttribute="bottom" constant="20" id="6Xh-tc-1Zl"/>
+                                            <constraint firstAttribute="trailing" secondItem="a2D-Lb-Akm" secondAttribute="trailing" constant="60" id="83T-x2-BcU"/>
+                                            <constraint firstAttribute="trailing" secondItem="nZZ-55-tty" secondAttribute="trailing" constant="20" id="92N-c0-Nbn"/>
+                                            <constraint firstItem="fz3-4C-Omw" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="9Cp-9w-Uvx"/>
+                                            <constraint firstItem="HHZ-Bp-CrI" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="Gfe-ob-d6W"/>
+                                            <constraint firstAttribute="trailing" secondItem="N6S-ri-Y8S" secondAttribute="trailing" constant="60" id="Hig-v9-JrU"/>
+                                            <constraint firstItem="QCA-GF-FwZ" firstAttribute="top" secondItem="fz3-4C-Omw" secondAttribute="bottom" constant="50" id="Ire-Pc-lsI"/>
+                                            <constraint firstItem="zPS-ZU-hlA" firstAttribute="top" secondItem="UXt-sq-dOs" secondAttribute="bottom" constant="10" id="Nga-iz-bOF"/>
+                                            <constraint firstItem="QCA-GF-FwZ" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="O1s-Bz-jj6"/>
+                                            <constraint firstAttribute="trailing" secondItem="QCA-GF-FwZ" secondAttribute="trailing" constant="20" id="PG8-i6-giI"/>
+                                            <constraint firstItem="a2D-Lb-Akm" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="60" id="RwX-K5-ZwY"/>
+                                            <constraint firstItem="nZZ-55-tty" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="Xmw-za-gHs"/>
+                                            <constraint firstItem="N6S-ri-Y8S" firstAttribute="top" secondItem="Bdw-hc-lRz" secondAttribute="bottom" constant="10" id="aIo-wZ-jH9"/>
+                                            <constraint firstItem="nZZ-55-tty" firstAttribute="top" secondItem="QCA-GF-FwZ" secondAttribute="bottom" constant="50" id="bjd-5P-vP4"/>
+                                            <constraint firstItem="HHZ-Bp-CrI" firstAttribute="top" secondItem="N6S-ri-Y8S" secondAttribute="bottom" constant="20" id="ee2-oa-ATk"/>
+                                            <constraint firstAttribute="trailing" secondItem="K8i-iJ-gtB" secondAttribute="trailing" constant="60" id="eg7-mt-Sgj"/>
+                                            <constraint firstItem="K8i-iJ-gtB" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="60" id="enG-fs-OKq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fz3-4C-Omw" secondAttribute="trailing" constant="20" id="f8o-Vc-87B"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bdw-hc-lRz" secondAttribute="trailing" constant="20" id="iSk-mI-SUa"/>
+                                            <constraint firstAttribute="trailing" secondItem="UXt-sq-dOs" secondAttribute="trailing" constant="20" id="jn8-PE-erF"/>
+                                            <constraint firstItem="a2D-Lb-Akm" firstAttribute="top" secondItem="HHZ-Bp-CrI" secondAttribute="bottom" constant="10" id="lk5-2b-Po1"/>
+                                            <constraint firstItem="UXt-sq-dOs" firstAttribute="top" secondItem="K8i-iJ-gtB" secondAttribute="bottom" constant="20" id="pwg-9N-IaZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="zPS-ZU-hlA" secondAttribute="trailing" constant="60" id="t89-AF-Ha1"/>
+                                            <constraint firstItem="fz3-4C-Omw" firstAttribute="top" secondItem="3dL-4f-ebg" secondAttribute="top" constant="30" id="uB6-Er-LuH"/>
+                                            <constraint firstItem="Bdw-hc-lRz" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="v8o-u0-GnB"/>
+                                            <constraint firstItem="zPS-ZU-hlA" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="60" id="yQ2-yA-k0A"/>
+                                            <constraint firstItem="UXt-sq-dOs" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="20" id="ygZ-DK-vYK"/>
+                                            <constraint firstItem="N6S-ri-Y8S" firstAttribute="leading" secondItem="3dL-4f-ebg" secondAttribute="leading" constant="60" id="z0S-DD-4Oj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3dL-4f-ebg" secondAttribute="trailing" id="8Fe-Zo-pHo"/>
+                                    <constraint firstItem="3dL-4f-ebg" firstAttribute="top" secondItem="2Hf-mH-YnM" secondAttribute="top" id="CPT-Ad-oPc"/>
+                                    <constraint firstItem="3dL-4f-ebg" firstAttribute="leading" secondItem="2Hf-mH-YnM" secondAttribute="leading" id="Dbp-lT-rB6"/>
+                                    <constraint firstItem="3dL-4f-ebg" firstAttribute="width" secondItem="2Hf-mH-YnM" secondAttribute="width" id="Enq-8r-Pq4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3dL-4f-ebg" secondAttribute="trailing" id="Lxd-WT-URS"/>
+                                    <constraint firstItem="3dL-4f-ebg" firstAttribute="leading" secondItem="2Hf-mH-YnM" secondAttribute="leading" id="Mep-8p-0Xj"/>
+                                    <constraint firstAttribute="bottom" secondItem="3dL-4f-ebg" secondAttribute="bottom" id="TxH-GX-ax6"/>
+                                    <constraint firstAttribute="bottom" secondItem="3dL-4f-ebg" secondAttribute="bottom" id="fFd-PC-0nj"/>
+                                    <constraint firstItem="3dL-4f-ebg" firstAttribute="top" secondItem="2Hf-mH-YnM" secondAttribute="top" id="sPF-vG-4cl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="MgG-R8-4mf" firstAttribute="trailing" secondItem="2Hf-mH-YnM" secondAttribute="trailing" id="U6x-Cq-ahA"/>
+                            <constraint firstItem="2Hf-mH-YnM" firstAttribute="top" secondItem="MgG-R8-4mf" secondAttribute="top" id="and-9q-jgz"/>
+                            <constraint firstItem="MgG-R8-4mf" firstAttribute="bottom" secondItem="2Hf-mH-YnM" secondAttribute="bottom" id="jkz-Je-qlk"/>
+                            <constraint firstItem="2Hf-mH-YnM" firstAttribute="leading" secondItem="MgG-R8-4mf" secondAttribute="leading" id="jox-Ob-g4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MgG-R8-4mf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NewEvent" id="9Rb-fz-Wpa">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="UKf-dh-reB">
+                            <connections>
+                                <action selector="back:" destination="TXE-ch-3DN" id="wZZ-VK-eqj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="send" id="8u2-UG-Q4R"/>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="inputTitle" destination="fz3-4C-Omw" id="J4V-OZ-R5j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYy-hc-cRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="2037"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="send" width="20" height="20"/>
+    </resources>
+</document>

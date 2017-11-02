@@ -23,6 +23,7 @@
 		C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432D6D1FA711CF00C4FB86 /* EventObject.swift */; };
 		C9529DA51FAAA2E700E34BD9 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9529DA41FAAA2E700E34BD9 /* EditViewController.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
+		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
 		CD087F2C8A6E7443FDBB3683 /* Pods_GenCon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		C9432D6D1FA711CF00C4FB86 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
 		C9529DA41FAAA2E700E34BD9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
+		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,18 +188,18 @@
 		C93D73041F85C8A9000AFE6C /* GenCon-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C9529DA21FAAA28500E34BD9 /* EditView */,
-				C9432D681FA7091F00C4FB86 /* Models */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
-				C938EE711FA18264001D5B97 /* TaskView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
-				C9429AFA1FA0D30A009DE5A8 /* Extentions */,
+				C9529DA21FAAA28500E34BD9 /* EditView */,
 				C938EE6A1FA17C49001D5B97 /* EventView */,
+				C9429AFA1FA0D30A009DE5A8 /* Extentions */,
+				C9432D681FA7091F00C4FB86 /* Models */,
+				C9E8538E1FAB90F400916848 /* Storyboards */,
+				C938EE711FA18264001D5B97 /* TaskView */,
 				C93D73051F85C8A9000AFE6C /* AppDelegate.swift */,
 				C93D730C1F85C8A9000AFE6C /* Assets.xcassets */,
 				C93D73111F85C8A9000AFE6C /* Info.plist */,
 				C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */,
-				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 			);
 			path = "GenCon-iOS";
 			sourceTree = "<group>";
@@ -242,6 +244,15 @@
 				C9529DA41FAAA2E700E34BD9 /* EditViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C9E8538E1FAB90F400916848 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
+				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		FBE08FCC3D77233FBDEAA48C /* Frameworks */ = {
@@ -316,6 +327,7 @@
 			files = (
 				C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
+				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
 				C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
