@@ -9,6 +9,18 @@
 import UIKit
 
 extension UIColor {
+    class var main: UIColor {
+        return UIColor.hex(hexStr: "009688", alpha: 1.0)
+    }
+    
+    class var mainDark: UIColor {
+        return UIColor.hex(hexStr: "00695c", alpha: 1.0)
+    }
+    
+    class var sub: UIColor {
+        return UIColor.hex(hexStr: "00b8d4", alpha: 1.0)
+    }
+    
     class func rgb(r: Int, g: Int, b: Int, alpha: CGFloat) -> UIColor{
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
     }
