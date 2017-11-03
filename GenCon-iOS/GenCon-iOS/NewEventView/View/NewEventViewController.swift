@@ -77,4 +77,10 @@ class NewEventViewController: UIViewController {
         viewModel.saveEvent()
         self.dismiss(animated: true,completion: nil)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.view = nil
+    }
+    
 }
