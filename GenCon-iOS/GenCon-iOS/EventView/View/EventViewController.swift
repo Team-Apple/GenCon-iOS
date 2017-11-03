@@ -86,10 +86,19 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
             completionHandler(true)
         }
         let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
-            self.navigationController?.pushViewController((UIStoryboard(name: "EditEvent", bundle: nil).instantiateViewController(withIdentifier: "EditEventViewController") as! EditEventViewController), animated: true)
+            self.performSegue(withIdentifier: "toEditEvent",sender: indexPath.row)
             completionHandler(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [destructiveAction, detailAction])
         return configuration
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toEditEvent") {
+            let vc: EditEventViewController = (segue.destination as? EditEventViewController)!
+            let data = self.viewModel.datas.value[sender as! Int]
+            vc.data = data
+        }
+    }
+    
 }

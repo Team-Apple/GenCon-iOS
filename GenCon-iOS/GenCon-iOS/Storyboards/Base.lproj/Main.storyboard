@@ -60,6 +60,14 @@
             </objects>
             <point key="canvasLocation" x="-1431" y="489"/>
         </scene>
+        <!--EditEvent-->
+        <scene sceneID="a41-Id-kjT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditEvent" id="Mtr-fb-fmn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsB-cR-DdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1582" y="1735"/>
+        </scene>
         <!--Event-->
         <scene sceneID="pDZ-n5-XC3">
             <objects>
@@ -86,25 +94,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r4Y-oa-SZj">
-                                                    <rect key="frame" x="8" y="8" width="359" height="133.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="133.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-vy-OwI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="111.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="111.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-Oy-RhE">
-                                                            <rect key="frame" x="0.0" y="116.5" width="359" height="17"/>
+                                                            <rect key="frame" x="0.0" y="116.5" width="0.0" height="17"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" text="開始日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-oK-tqh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
                                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終了日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-SU-e1v">
-                                                                    <rect key="frame" x="179.5" y="0.0" width="179.5" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
                                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -149,6 +157,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="j23-X7-Itf" id="PaR-CQ-5wo"/>
+                        <segue destination="Mtr-fb-fmn" kind="show" identifier="toEditEvent" id="gzN-BR-0zw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRA-6u-srM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,7 +170,7 @@
                 <viewControllerPlaceholder storyboardName="NewEvent" id="LId-te-gbI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cqz-XF-V3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="1645"/>
+            <point key="canvasLocation" x="-1310" y="1736"/>
         </scene>
         <!--Task-->
         <scene sceneID="fca-oq-5gk">
