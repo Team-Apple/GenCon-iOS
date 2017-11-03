@@ -30,6 +30,6 @@ struct NewEventViewModel {
     }
     
     func saveEvent() {
-        request.saveEvents(params: ["title": title.value, "start_at_date": startDate!, "start_at_time": startTime!, "end_at_date": endDate!, "end_at_time": endTime!, "memo": memo.value, "priority": "normal"])
+        request.saveEvent(params: ["title": title.value, "start_at_date": startDate!, "start_at_time": startTime!, "end_at_date": endDate!, "end_at_time": endTime!, "memo": memo.value, "priority": "normal"])
     }
 }

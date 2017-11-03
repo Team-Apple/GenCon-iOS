@@ -29,4 +29,8 @@ struct EventViewModel {
             self.datas.value = data
         }
     }
+    
+    func deleteEvent(id: String) {
+        request.deleteEvent(id: id)
+    }
 }
