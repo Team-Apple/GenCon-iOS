@@ -37,7 +37,7 @@
         <!--NewEvent-->
         <scene sceneID="fne-cv-fXz">
             <objects>
-                <viewController id="TXE-ch-3DN" customClass="EditViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TXE-ch-3DN" customClass="NewEventViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGG-pw-my4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,11 +255,21 @@
                                 <action selector="back:" destination="TXE-ch-3DN" id="wZZ-VK-eqj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="send" id="8u2-UG-Q4R"/>
+                        <barButtonItem key="rightBarButtonItem" image="send" id="8u2-UG-Q4R">
+                            <connections>
+                                <action selector="save:" destination="TXE-ch-3DN" id="WPB-BP-wpq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
-                        <outlet property="inputTitle" destination="fz3-4C-Omw" id="J4V-OZ-R5j"/>
+                        <outlet property="endDate" destination="N6S-ri-Y8S" id="N8O-jz-f2M"/>
+                        <outlet property="endTime" destination="a2D-Lb-Akm" id="HOq-q5-wSP"/>
+                        <outlet property="eventTitle" destination="fz3-4C-Omw" id="SD4-Mw-gwV"/>
+                        <outlet property="memo" destination="QCA-GF-FwZ" id="n4p-pY-2um"/>
+                        <outlet property="saveButton" destination="8u2-UG-Q4R" id="1A9-bq-KQl"/>
+                        <outlet property="startDate" destination="K8i-iJ-gtB" id="DMc-Ta-w4Y"/>
+                        <outlet property="startTime" destination="zPS-ZU-hlA" id="By5-qw-Ky4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYy-hc-cRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

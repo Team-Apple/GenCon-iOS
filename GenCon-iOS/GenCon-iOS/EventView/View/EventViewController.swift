@@ -22,10 +22,10 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewAndModel()
+        bindViewAndViewModel()
     }
     
-    func bindViewAndModel() {
+    func bindViewAndViewModel() {
         viewModel.datas.asObservable()
             .subscribe({ event in
                 if event.event.element?.count == 0 {
@@ -39,8 +39,8 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         viewModel.datas.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "Cell")) { (row, element, cell) in
                 (cell.viewWithTag(1) as! UILabel).text = element.eventTitle
-                (cell.viewWithTag(2) as! UILabel).text = "開始時 " + (element.startDateTime?.components(separatedBy: " ")[1])!
-                (cell.viewWithTag(3) as! UILabel).text = "終了時 " + (element.endDateTime?.components(separatedBy: " ")[1])!
+                (cell.viewWithTag(2) as! UILabel).text = "開始時 " + element.startDateTime!
+                (cell.viewWithTag(3) as! UILabel).text = "終了時 " + element.endDateTime!
             }
             .disposed(by: disposeBag)
         
