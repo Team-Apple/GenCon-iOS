@@ -19,21 +19,18 @@ class EditEventViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     var data: EventObject? = nil
     
-    let dateFormatter = DateFormatter()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setValue()
-        dateFormatter.locale = Locale(identifier: "ja_JP")
     }
     
     func setValue() {
         eventTitle.text = data?.eventTitle
         memo.text = data?.memo
-        //startDate.date =
-        /*startTime
-        endDate
-        endTime*/
+        startDate.date = DateUtils.dateFromString(string: (data?.startDateTime)!, format: "yyyy-MM-dd HH:mm:ss")
+        startTime.date = DateUtils.dateFromString(string: (data?.startDateTime)!, format: "yyyy-MM-dd HH:mm:ss")
+        endDate.date = DateUtils.dateFromString(string: (data?.endDateTime)!, format: "yyyy-MM-dd HH:mm:ss")
+        endTime.date = DateUtils.dateFromString(string: (data?.endDateTime)!, format: "yyyy-MM-dd HH:mm:ss")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
