@@ -26,4 +26,7 @@ class Requests {
         }
     }
     
+    func saveEvents(params: [String: String]) {
+        Alamofire.request(baseURL + "events", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+    }
 }
