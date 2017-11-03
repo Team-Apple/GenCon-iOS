@@ -19,10 +19,13 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
     let viewModel = EventViewModel()
     let disposeBag   = DisposeBag()
     @IBOutlet weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewAndViewModel()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(EventViewController.refresh(sender:)), for: .valueChanged)
     }
     
     func bindViewAndViewModel() {
@@ -70,6 +73,11 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         emptyStateLabel.font = UIFont.systemFont(ofSize: 32)
         
         return emptyStateLabel
+    }
+    
+    @objc func refresh(sender: UIRefreshControl) {
+        viewModel.updateDatas(date: selectedDateStr)
+        sender.endRefreshing()
     }
     
 }
