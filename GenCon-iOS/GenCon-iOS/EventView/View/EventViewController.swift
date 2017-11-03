@@ -26,6 +26,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         bindViewAndViewModel()
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(EventViewController.refresh(sender:)), for: .valueChanged)
+        tableView.delegate = self
     }
     
     func bindViewAndViewModel() {
@@ -71,13 +72,23 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         emptyStateLabel.textColor = UIColor.white
         emptyStateLabel.adjustsFontSizeToFitWidth = true
         emptyStateLabel.font = UIFont.systemFont(ofSize: 32)
-        
         return emptyStateLabel
     }
     
     @objc func refresh(sender: UIRefreshControl) {
         viewModel.updateDatas(date: selectedDateStr)
         sender.endRefreshing()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let destructiveAction = UIContextualAction(style: .destructive,title: "Delete") { (action, view, completionHandler) in
+            completionHandler(true)
+        }
+        let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
+            completionHandler(true)
+        }
+        let configuration = UISwipeActionsConfiguration(actions: [destructiveAction, detailAction])
+        return configuration
     }
     
 }

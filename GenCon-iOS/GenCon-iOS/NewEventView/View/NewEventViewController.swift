@@ -75,6 +75,5 @@ class NewEventViewController: UIViewController {
 
     @IBAction func save(_ sender: UIBarButtonItem) {
         viewModel.saveEvent()
-        self.dismiss(animated: true,completion: nil)
     }
 }
