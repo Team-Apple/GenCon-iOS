@@ -86,10 +86,10 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
             completionHandler(true)
         }
         let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
+            self.navigationController?.pushViewController((UIStoryboard(name: "EditEvent", bundle: nil).instantiateViewController(withIdentifier: "EditEventViewController") as! EditEventViewController), animated: true)
             completionHandler(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [destructiveAction, detailAction])
         return configuration
     }
-    
 }

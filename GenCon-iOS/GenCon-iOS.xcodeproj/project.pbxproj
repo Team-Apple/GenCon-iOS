@@ -22,6 +22,8 @@
 		C9432D6A1FA7093900C4FB86 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432D691FA7093900C4FB86 /* Requests.swift */; };
 		C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432D6D1FA711CF00C4FB86 /* EventObject.swift */; };
 		C9529DA51FAAA2E700E34BD9 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9529DA41FAAA2E700E34BD9 /* NewEventViewController.swift */; };
+		C972A7EC1FACED04002FF538 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7EB1FACED04002FF538 /* EditViewController.swift */; };
+		C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E853921FAB95AA00916848 /* NewEventViewModel.swift */; };
@@ -49,6 +51,8 @@
 		C9432D691FA7093900C4FB86 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		C9432D6D1FA711CF00C4FB86 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
 		C9529DA41FAAA2E700E34BD9 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		C972A7EB1FACED04002FF538 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditEvent.storyboard; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 		C93D73041F85C8A9000AFE6C /* GenCon-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C972A7E91FACECE8002FF538 /* EditEvent */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
 				C9529DA21FAAA28500E34BD9 /* NewEventView */,
@@ -249,11 +254,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C972A7E91FACECE8002FF538 /* EditEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C972A7EA1FACECF1002FF538 /* View */,
+			);
+			path = EditEvent;
+			sourceTree = "<group>";
+		};
+		C972A7EA1FACECF1002FF538 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C972A7EB1FACED04002FF538 /* EditViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C9E8538E1FAB90F400916848 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
+				C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -338,6 +360,7 @@
 			files = (
 				C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
+				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
 				C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */,
 			);
@@ -424,6 +447,7 @@
 				C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */,
 				C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */,
 				C9529DA51FAAA2E700E34BD9 /* NewEventViewController.swift in Sources */,
+				C972A7EC1FACED04002FF538 /* EditViewController.swift in Sources */,
 				C9429AF91FA0D305009DE5A8 /* DeviceSize.swift in Sources */,
 				C938EE7D1FA18265001D5B97 /* AnnounceViewController.swift in Sources */,
 				C938EE7C1FA18265001D5B97 /* TaskViewModel.swift in Sources */,
