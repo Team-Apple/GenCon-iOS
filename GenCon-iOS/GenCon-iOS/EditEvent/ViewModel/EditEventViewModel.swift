@@ -1,14 +1,14 @@
 //
-//  NewEventModel.swift
+//  EditViewModel.swift
 //  GenCon-iOS
 //
-//  Created by Taillook on 2017/11/03.
+//  Created by Taillook on 2017/11/04.
 //  Copyright © 2017年 Taillook. All rights reserved.
 //
 
 import RxSwift
 
-struct NewEventViewModel {
+struct EditEventViewModel {
     var title = Variable("")
     var memo = Variable("")
     var priority: String? = "1"
@@ -25,7 +25,9 @@ struct NewEventViewModel {
         endTime = DateUtils.stringFromDate(date: Date(), format: "HH:mm")
     }
     
-    func saveEvent() {
-        request.saveEvent(params: ["title": title.value, "start_at_date": startDate!, "start_at_time": startTime!, "end_at_date": endDate!, "end_at_time": endTime!, "memo": memo.value, "priority": "normal"])
+    func updateEvent(id: String) {
+        request.update(params: ["title": title.value, "start_at_date": startDate!, "start_at_time": startTime!, "end_at_date": endDate!, "end_at_time": endTime!, "memo": memo.value, "priority": "normal"], model: "events", id: id)
+        print(id)
     }
 }
+

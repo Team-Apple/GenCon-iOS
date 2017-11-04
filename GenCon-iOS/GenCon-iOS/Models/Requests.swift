@@ -42,4 +42,16 @@ class Requests {
                 }
         }
     }
+    
+    func update(params: [String: String], model: String, id: String) {
+        Alamofire.request(baseURL + model + "/" + id, method: .put, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .responseString { response in
+                if response.response?.statusCode == 200 {
+                    print("delete ok")
+                }else if response.response?.statusCode == 500 {
+                    print(response.result.value!)
+                    print("error 500")
+                }
+            }
+    }
 }

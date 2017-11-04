@@ -25,6 +25,7 @@
 		C972A7EC1FACED04002FF538 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7EB1FACED04002FF538 /* EditViewController.swift */; };
 		C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */; };
 		C972A7F01FAD2301002FF538 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7EF1FAD2301002FF538 /* DateUtils.swift */; };
+		C972A7F31FAD2AF1002FF538 /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E853921FAB95AA00916848 /* NewEventViewModel.swift */; };
@@ -55,6 +56,7 @@
 		C972A7EB1FACED04002FF538 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditEvent.storyboard; sourceTree = "<group>"; };
 		C972A7EF1FAD2301002FF538 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		C972A7E91FACECE8002FF538 /* EditEvent */ = {
 			isa = PBXGroup;
 			children = (
+				C972A7F11FAD2ADE002FF538 /* ViewModel */,
 				C972A7EA1FACECF1002FF538 /* View */,
 			);
 			path = EditEvent;
@@ -271,6 +274,14 @@
 				C972A7EB1FACED04002FF538 /* EditViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C972A7F11FAD2ADE002FF538 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C9E8538E1FAB90F400916848 /* Storyboards */ = {
@@ -448,6 +459,7 @@
 				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
 				C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */,
 				C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */,
+				C972A7F31FAD2AF1002FF538 /* EditEventViewModel.swift in Sources */,
 				C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */,
 				C9529DA51FAAA2E700E34BD9 /* NewEventViewController.swift in Sources */,
 				C972A7EC1FACED04002FF538 /* EditViewController.swift in Sources */,
@@ -601,11 +613,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS65CTH2V7;
 				INFOPLIST_FILE = "GenCon-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.grapebread.GenCon-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -617,11 +630,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS65CTH2V7;
 				INFOPLIST_FILE = "GenCon-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.grapebread.GenCon-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -225,7 +225,11 @@
                         <viewLayoutGuide key="safeArea" id="abC-r2-Lhr"/>
                     </view>
                     <navigationItem key="navigationItem" title="NewEvent" id="sOd-gC-STo">
-                        <barButtonItem key="rightBarButtonItem" image="send" id="8gi-w8-3aR"/>
+                        <barButtonItem key="rightBarButtonItem" image="send" id="8gi-w8-3aR">
+                            <connections>
+                                <action selector="update:" destination="G6t-gx-5CF" id="pZr-ea-Xxg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <size key="freeformSize" width="375" height="900"/>

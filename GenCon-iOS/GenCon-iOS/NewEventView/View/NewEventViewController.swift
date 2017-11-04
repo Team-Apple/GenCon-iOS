@@ -22,11 +22,9 @@ class NewEventViewController: UIViewController {
 
     var viewModel = NewEventViewModel()
     var disposeBag = DisposeBag()
-    let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateFormatter.locale = Locale(identifier: "ja_JP")
         bindViewAndViewModel()
     }
 
@@ -40,31 +38,27 @@ class NewEventViewController: UIViewController {
             .bind(to: saveButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        self.dateFormatter.dateFormat = "yyyy-MM-dd"
-        
         startDate.rx.date.asObservable()
             .bind(onNext: { date in
-                self.viewModel.startDate = self.dateFormatter.string(from: date)
+                self.viewModel.startDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
             })
             .disposed(by: disposeBag)
 
         endDate.rx.date.asObservable()
             .bind(onNext: { date in
-                self.viewModel.endDate = self.dateFormatter.string(from: date)
+                self.viewModel.endDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
             })
             .disposed(by: disposeBag)
         
-        dateFormatter.dateFormat = "HH:mm"
-        
         startTime.rx.date.asObservable()
             .bind(onNext: { date in
-                self.viewModel.startTime = self.dateFormatter.string(from: date)
+                self.viewModel.startTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
             })
             .disposed(by: disposeBag)
         
         endTime.rx.date.asObservable()
             .bind(onNext: { date in
-                self.viewModel.endTime = self.dateFormatter.string(from: date)
+                self.viewModel.endTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
             })
             .disposed(by: disposeBag)
     }

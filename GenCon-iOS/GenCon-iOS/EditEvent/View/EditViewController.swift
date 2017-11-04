@@ -8,6 +8,8 @@
 
 import UIKit
 import Material
+import RxSwift
+import RxCocoa
 
 class EditEventViewController: UIViewController {
     @IBOutlet weak var eventTitle: TextField!
@@ -18,10 +20,13 @@ class EditEventViewController: UIViewController {
     @IBOutlet weak var endTime: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     var data: EventObject? = nil
+    var viewModel = EditEventViewModel()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setValue()
+        bindViewAndViewModel()
     }
     
     func setValue() {
@@ -33,9 +38,49 @@ class EditEventViewController: UIViewController {
         endTime.date = DateUtils.dateFromString(string: (data?.endDateTime)!, format: "yyyy-MM-dd HH:mm:ss")
     }
     
+    func bindViewAndViewModel() {
+        eventTitle.rx.text.orEmpty.bind(to: viewModel.title).disposed(by: disposeBag)
+        memo.rx.text.orEmpty.bind(to: viewModel.memo).disposed(by: disposeBag)
+        
+        Observable.combineLatest(eventTitle.rx.text.orEmpty.asObservable(), memo.rx.text.orEmpty.asObservable()){
+            $0.characters.count > 0 && $1.characters.count > 0
+            }
+            .bind(to: saveButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        startDate.rx.date.asObservable()
+            .bind(onNext: { date in
+                self.viewModel.startDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
+            })
+            .disposed(by: disposeBag)
+        
+        endDate.rx.date.asObservable()
+            .bind(onNext: { date in
+                self.viewModel.endDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
+            })
+            .disposed(by: disposeBag)
+        
+        startTime.rx.date.asObservable()
+            .bind(onNext: { date in
+                self.viewModel.startTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
+            })
+            .disposed(by: disposeBag)
+        
+        endTime.rx.date.asObservable()
+            .bind(onNext: { date in
+                self.viewModel.endTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
+            })
+            .disposed(by: disposeBag)
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.view = nil
+    }
+    
+    @IBAction func update(_ sender: UIBarButtonItem) {
+        viewModel.updateEvent(id: (data?.id)!)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
