@@ -13,10 +13,7 @@ struct EventViewModel {
     let request = Requests()
     
     init() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ja_JP")
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        updateDatas(date: dateFormatter.string(from: Date()))
+        updateDatas(date: DateUtils.stringFromDate(date: Date(), format: "yyyy-MM-dd"))
     }
 
     func selectAtIndex(i: Int) {

@@ -33,7 +33,7 @@ class NewEventViewController: UIViewController {
         memo.rx.text.orEmpty.bind(to: viewModel.memo).disposed(by: disposeBag)
         
         Observable.combineLatest(eventTitle.rx.text.orEmpty.asObservable(), memo.rx.text.orEmpty.asObservable()){
-                $0.characters.count > 0 && $1.characters.count > 0
+                $0.count > 0 && $1.count > 0
             }
             .bind(to: saveButton.rx.isEnabled)
             .disposed(by: disposeBag)

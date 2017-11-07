@@ -24,12 +24,9 @@ class CalendarViewController: UIViewController, KoyomiDelegate {
     }
     var selectedDate = Date() {
         didSet {
-            dateFormatter.locale = Locale(identifier: "ja_JP")
-            dateFormatter.dateFormat = "yyyy/MM/dd"
-            selectedDateStr = dateFormatter.string(from: selectedDate)
+            selectedDateStr = DateUtils.stringFromDate(date: selectedDate, format: "yyyy/MM/dd")
         }
     }
-    let dateFormatter = DateFormatter()
     let titleLabel = UILabel()
     let koyomi = Koyomi(frame: CGRect(x: 0, y : 0, width: DeviceSize.screenWidth, height: 300), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
 

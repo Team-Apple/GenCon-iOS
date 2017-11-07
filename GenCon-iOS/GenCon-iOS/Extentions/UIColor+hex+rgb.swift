@@ -30,9 +30,9 @@ extension UIColor {
         let alpha = alpha
         hexStr = hexStr.replacingOccurrences(of: "#", with: "") as NSString
         
-        if String(hexStr).characters.count == 3 {
+        if String(hexStr).count == 3 {
             var newHexStr = ""
-            for c in String(hexStr).characters {
+            for c in String(hexStr) {
                 newHexStr += "\(c)\(c)"
             }
             hexStr = newHexStr as NSString
