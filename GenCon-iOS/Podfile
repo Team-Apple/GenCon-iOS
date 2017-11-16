@@ -12,4 +12,5 @@ target 'GenCon-iOS' do
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'Material'
+  pod 'R.swift'
 end

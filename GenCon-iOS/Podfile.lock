@@ -1,14 +1,17 @@
 PODS:
   - Alamofire (4.5.1)
   - Koyomi (1.2.6)
-  - Material (2.12.6):
-    - Material/Core (= 2.12.6)
-  - Material/Core (2.12.6):
-    - Motion (~> 1.2.0)
-  - Motion (1.2.4):
-    - Motion/Core (= 1.2.4)
-  - Motion/Core (1.2.4)
-  - ObjectMapper (3.0.0)
+  - Material (2.12.16):
+    - Material/Core (= 2.12.16)
+  - Material/Core (2.12.16):
+    - Motion (~> 1.2.5)
+  - Motion (1.2.5):
+    - Motion/Core (= 1.2.5)
+  - Motion/Core (1.2.5)
+  - ObjectMapper (3.1.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
@@ -18,18 +21,21 @@ DEPENDENCIES:
   - Koyomi
   - Material
   - ObjectMapper
+  - R.swift
   - RxCocoa
   - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Koyomi: 23b8ab68982d4efe7d7f32ec525e6b04c986db38
-  Material: 590fe1e46a9b3615d0e734860085eca8b50f401b
-  Motion: ea6cc1d43e7b9c99819bfe91f6aee2500e208fc4
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  Material: 00fdeb39f5d97dc19f09b160e8b95c47e2ed708d
+  Motion: 88a8bee21926af792333f4b9e7170f710e9e48f3
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 6fe19d2a858028d7a58c5392f481c528c1cc6c66
+PODFILE CHECKSUM: bcfc0d293faf5c7054d476114fd505314544ffea
 
 COCOAPODS: 1.4.0.beta.2
