@@ -14,6 +14,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Koyomi
+import SVGKit
 
 class EventViewController: CalendarViewController, UITableViewDelegate {
     let viewModel = EventViewModel()
@@ -33,7 +34,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         viewModel.datas.asObservable()
             .subscribe({ event in
                 if event.event.element?.count == 0 {
-                    self.tableView.backgroundView = self.setEmptyStateLabel()
+                    self.tableView.backgroundView = self.setEmptyStateView()
                 }else {
                     self.tableView.backgroundView = nil
                 }
@@ -63,16 +64,18 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         viewModel.updateDatas(date: selectedDateStr)
     }
     
-    func setEmptyStateLabel() -> UILabel {
-        let emptyStateLabel = UILabel()
-        emptyStateLabel.frame = CGRect(x: 100, y: 100,width: 100, height: self.tableView.bounds.height)
-        emptyStateLabel.backgroundColor = UIColor.gray
-        emptyStateLabel.textAlignment = NSTextAlignment.center
-        emptyStateLabel.text = "No Data"
-        emptyStateLabel.textColor = UIColor.white
-        emptyStateLabel.adjustsFontSizeToFitWidth = true
-        emptyStateLabel.font = UIFont.systemFont(ofSize: 32)
-        return emptyStateLabel
+    func setEmptyStateView() -> UIView {
+        let emptyStateView = UIView()
+        emptyStateView.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height)
+        emptyStateView.backgroundColor = UIColor.gray
+        let eventImageView = UIImageView(frame: emptyStateView.frame)
+        eventImageView.image = R.image.event()
+        let svgImage = SVGKImage(named: "eventVec")
+        svgImage?.size = emptyStateView.bounds.size
+        eventImageView.image = svgImage?.uiImage
+        eventImageView.tintColor = UIColor.white
+        emptyStateView.addSubview(eventImageView)
+        return emptyStateView
     }
     
     @objc func refresh(sender: UIRefreshControl) {

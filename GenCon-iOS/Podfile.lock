@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (4.5.1)
+  - CocoaLumberjack (3.3.0):
+    - CocoaLumberjack/Default (= 3.3.0)
+    - CocoaLumberjack/Extensions (= 3.3.0)
+  - CocoaLumberjack/Default (3.3.0)
+  - CocoaLumberjack/Extensions (3.3.0):
+    - CocoaLumberjack/Default
   - Koyomi (1.2.6)
   - Material (2.12.16):
     - Material/Core (= 2.12.16)
@@ -15,6 +21,8 @@ PODS:
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
+  - SVGKit (2.0.1):
+    - CocoaLumberjack (~> 3.x)
 
 DEPENDENCIES:
   - Alamofire
@@ -24,9 +32,21 @@ DEPENDENCIES:
   - R.swift
   - RxCocoa
   - RxSwift
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
+
+EXTERNAL SOURCES:
+  SVGKit:
+    :branch: 2.x
+    :git: https://github.com/SVGKit/SVGKit.git
+
+CHECKOUT OPTIONS:
+  SVGKit:
+    :commit: 51b6f534b09236acfe04d520336a05a1096e67ae
+    :git: https://github.com/SVGKit/SVGKit.git
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Koyomi: 23b8ab68982d4efe7d7f32ec525e6b04c986db38
   Material: 00fdeb39f5d97dc19f09b160e8b95c47e2ed708d
   Motion: 88a8bee21926af792333f4b9e7170f710e9e48f3
@@ -35,7 +55,8 @@ SPEC CHECKSUMS:
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SVGKit: 4055d9e809b5db8633755979cfb3b02dc5a8c20d
 
-PODFILE CHECKSUM: bcfc0d293faf5c7054d476114fd505314544ffea
+PODFILE CHECKSUM: 703d9738d3e9174d0e03950c2bd8833b14cbe254
 
 COCOAPODS: 1.4.0.beta.2

@@ -26,6 +26,7 @@
 		C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */; };
 		C972A7F01FAD2301002FF538 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7EF1FAD2301002FF538 /* DateUtils.swift */; };
 		C972A7F31FAD2AF1002FF538 /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */; };
+		C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C97DD2071FCFA9FC00949D37 /* eventVec.svg */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E853921FAB95AA00916848 /* NewEventViewModel.swift */; };
@@ -58,6 +59,7 @@
 		C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditEvent.storyboard; sourceTree = "<group>"; };
 		C972A7EF1FAD2301002FF538 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
+		C97DD2071FCFA9FC00949D37 /* eventVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventVec.svg; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */,
+				C97DD2071FCFA9FC00949D37 /* eventVec.svg */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,8 +323,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C93D73141F85C8A9000AFE6C /* Build configuration list for PBXNativeTarget "GenCon-iOS" */;
 			buildPhases = (
-				C9FD0C0C1FBD358800E1C7B8 /* Run Script */,
 				4D74AB89D062E002020C1B7B /* [CP] Check Pods Manifest.lock */,
+				C9FD0C0C1FBD358800E1C7B8 /* Run Script */,
 				C93D72FE1F85C8A9000AFE6C /* Sources */,
 				C93D72FF1F85C8A9000AFE6C /* Frameworks */,
 				C93D73001F85C8A9000AFE6C /* Resources */,
@@ -376,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */,
 				C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
@@ -395,6 +399,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Koyomi/Koyomi.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
@@ -402,10 +407,12 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koyomi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
@@ -413,6 +420,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
