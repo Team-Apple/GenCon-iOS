@@ -64,7 +64,7 @@
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
-		C9FD0C111FBDC93300E1C7B8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C9FD0C111FBDC93300E1C7B8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D4C91F10DB06DEB978A65D01 /* Pods-GenCon-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */,
-				C97DD2071FCFA9FC00949D37 /* eventVec.svg */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,20 +202,21 @@
 		C93D73041F85C8A9000AFE6C /* GenCon-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C972A7E91FACECE8002FF538 /* EditEvent */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
-				C9529DA21FAAA28500E34BD9 /* NewEventView */,
+				C972A7E91FACECE8002FF538 /* EditEvent */,
 				C938EE6A1FA17C49001D5B97 /* EventView */,
 				C9429AFA1FA0D30A009DE5A8 /* Extentions */,
 				C9432D681FA7091F00C4FB86 /* Models */,
+				C9529DA21FAAA28500E34BD9 /* NewEventView */,
 				C9E8538E1FAB90F400916848 /* Storyboards */,
 				C938EE711FA18264001D5B97 /* TaskView */,
-				C9FD0C111FBDC93300E1C7B8 /* R.generated.swift */,
+				C9D8CC761FD8E4DA00C143C7 /* resource */,
 				C93D73051F85C8A9000AFE6C /* AppDelegate.swift */,
 				C93D730C1F85C8A9000AFE6C /* Assets.xcassets */,
 				C93D73111F85C8A9000AFE6C /* Info.plist */,
 				C93D730E1F85C8A9000AFE6C /* LaunchScreen.storyboard */,
+				C9FD0C111FBDC93300E1C7B8 /* R.generated.swift */,
 			);
 			path = "GenCon-iOS";
 			sourceTree = "<group>";
@@ -224,10 +224,10 @@
 		C9429AFA1FA0D30A009DE5A8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				C972A7EF1FAD2301002FF538 /* DateUtils.swift */,
 				C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */,
 				C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */,
 				C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */,
-				C972A7EF1FAD2301002FF538 /* DateUtils.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -251,8 +251,8 @@
 		C9529DA21FAAA28500E34BD9 /* NewEventView */ = {
 			isa = PBXGroup;
 			children = (
-				C9E853911FAB958D00916848 /* ViewModel */,
 				C9529DA31FAAA2AC00E34BD9 /* View */,
+				C9E853911FAB958D00916848 /* ViewModel */,
 			);
 			path = NewEventView;
 			sourceTree = "<group>";
@@ -268,8 +268,8 @@
 		C972A7E91FACECE8002FF538 /* EditEvent */ = {
 			isa = PBXGroup;
 			children = (
-				C972A7F11FAD2ADE002FF538 /* ViewModel */,
 				C972A7EA1FACECF1002FF538 /* View */,
+				C972A7F11FAD2ADE002FF538 /* ViewModel */,
 			);
 			path = EditEvent;
 			sourceTree = "<group>";
@@ -290,12 +290,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C9D8CC761FD8E4DA00C143C7 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C97DD2071FCFA9FC00949D37 /* eventVec.svg */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		C9E8538E1FAB90F400916848 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */,
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
-				C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
