@@ -66,7 +66,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
     
     func setEmptyStateView() -> UIView {
         let emptyStateView = UIView()
-        emptyStateView.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height)
+        emptyStateView.frame = CGRect(x: self.tableView.bounds.width / 4, y: self.tableView.bounds.width / 2, width: self.tableView.bounds.width / 2, height: self.tableView.bounds.width / 2)
         emptyStateView.backgroundColor = UIColor.gray
         let eventImageView = UIImageView(frame: emptyStateView.frame)
         eventImageView.image = R.image.event()
