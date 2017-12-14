@@ -21,14 +21,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
     /// Resource file `eventVec.svg`.
     static let eventVecSvg = Rswift.FileResource(bundle: R.hostingBundle, name: "eventVec", pathExtension: "svg")
+    /// Resource file `taskVec.svg`.
+    static let taskVecSvg = Rswift.FileResource(bundle: R.hostingBundle, name: "taskVec", pathExtension: "svg")
     
     /// `bundle.url(forResource: "eventVec", withExtension: "svg")`
     static func eventVecSvg(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.eventVecSvg
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "taskVec", withExtension: "svg")`
+    static func taskVecSvg(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.taskVecSvg
       return fileResource.bundle.url(forResource: fileResource)
     }
     

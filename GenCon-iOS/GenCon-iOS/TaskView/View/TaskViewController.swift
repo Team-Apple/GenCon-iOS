@@ -66,10 +66,9 @@ class TaskViewController: CalendarViewController, UITableViewDelegate {
         emptyStateView.backgroundColor = UIColor.gray
         let eventImageView = UIImageView(frame: emptyStateView.frame)
         eventImageView.image = R.image.event()
-        let svgImage = SVGKImage(named: "eventVec")
+        let svgImage = SVGKImage(named: "taskVec")
         svgImage?.size = emptyStateView.bounds.size
         eventImageView.image = svgImage?.uiImage
-        eventImageView.tintColor = UIColor.white
         emptyStateView.addSubview(eventImageView)
         return emptyStateView
     }

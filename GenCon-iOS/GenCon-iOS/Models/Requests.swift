@@ -28,6 +28,22 @@ class Requests {
         }
     }
     
+    func fetchTasks(startDate: String, callback: @escaping ([EventObject]) -> Void) {
+        Alamofire.request(baseURL + "events.json", method: .get, parameters: ["start_at_date": startDate])
+            .responseJSON{ response in
+                if response.response?.statusCode == 200 {
+                    var data: [EventObject] = []
+                    for item in (response.result.value as! [[String: Any]]) {
+                        let eventObject: EventObject = Mapper<EventObject>()
+                            .map(JSONString: String(data: try! JSONSerialization.data(withJSONObject: item, options: []), encoding: .utf8)!)!
+                        data.append(eventObject)
+                        //print(response.result.value as! [[String: Any]])
+                    }
+                    callback(data)
+                }
+        }
+    }
+    
     func saveEvent(params: [String: String]) {
         Alamofire.request(baseURL + "events", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
             .responseString { response in

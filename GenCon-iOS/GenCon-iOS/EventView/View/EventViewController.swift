@@ -73,7 +73,6 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         let svgImage = SVGKImage(named: "eventVec")
         svgImage?.size = emptyStateView.bounds.size
         eventImageView.image = svgImage?.uiImage
-        eventImageView.tintColor = UIColor.white
         emptyStateView.addSubview(eventImageView)
         return emptyStateView
     }

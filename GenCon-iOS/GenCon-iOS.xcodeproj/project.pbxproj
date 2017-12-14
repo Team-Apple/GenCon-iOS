@@ -28,6 +28,8 @@
 		C972A7F31FAD2AF1002FF538 /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */; };
 		C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C97DD2071FCFA9FC00949D37 /* eventVec.svg */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
+		C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9C49BAC1FE218DD000B09FF /* taskVec.svg */; };
+		C9C49BB01FE21C2F000B09FF /* taskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C49BAF1FE21C2F000B09FF /* taskObject.swift */; };
 		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E853921FAB95AA00916848 /* NewEventViewModel.swift */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
@@ -61,6 +63,8 @@
 		C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
 		C97DD2071FCFA9FC00949D37 /* eventVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventVec.svg; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
+		C9C49BAC1FE218DD000B09FF /* taskVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taskVec.svg; sourceTree = "<group>"; };
+		C9C49BAF1FE21C2F000B09FF /* taskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskObject.swift; sourceTree = "<group>"; };
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		C938EE711FA18264001D5B97 /* TaskView */ = {
 			isa = PBXGroup;
 			children = (
+				C9C49BAE1FE21C04000B09FF /* Objects */,
 				C938EE721FA18264001D5B97 /* View */,
 				C938EE741FA18264001D5B97 /* ViewModel */,
 			);
@@ -290,10 +295,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C9C49BAE1FE21C04000B09FF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C9C49BAF1FE21C2F000B09FF /* taskObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		C9D8CC761FD8E4DA00C143C7 /* resource */ = {
 			isa = PBXGroup;
 			children = (
 				C97DD2071FCFA9FC00949D37 /* eventVec.svg */,
+				C9C49BAC1FE218DD000B09FF /* taskVec.svg */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -389,6 +403,7 @@
 			files = (
 				C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */,
 				C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */,
+				C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
@@ -490,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */,
+				C9C49BB01FE21C2F000B09FF /* taskObject.swift in Sources */,
 				C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */,
 				C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */,
 				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
