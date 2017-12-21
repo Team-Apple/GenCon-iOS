@@ -71,10 +71,11 @@ class NewEventViewController: UIViewController {
         viewModel.saveEvent()
         self.dismiss(animated: true,completion: nil)
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.view = nil
+        NotificationCenter.default.post(name: Notification.Name("fetchEventNotifi"), object: nil, userInfo: nil)
     }
-    
+
 }

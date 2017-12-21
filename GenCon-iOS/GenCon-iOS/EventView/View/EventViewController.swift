@@ -55,6 +55,12 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
                 self?.tableView.deselectRow(at: indexPath, animated: true)
             })
             .disposed(by: disposeBag)
+
+        NotificationCenter.default.rx.notification(Notification.Name("fetchEventNotifi"), object: nil)
+            .subscribe({ _ in
+                self.viewModel.updateDatas(date: self.selectedDateStr)
+            })
+            .disposed(by: disposeBag)
     }
     
     func koyomi(_ koyomi: Koyomi, didSelect date: Date?, forItemAt indexPath: IndexPath) {

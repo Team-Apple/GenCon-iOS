@@ -28,4 +28,3 @@ class TaskObject: Mappable {
         id              <- map["id"]
     }
 }
-
