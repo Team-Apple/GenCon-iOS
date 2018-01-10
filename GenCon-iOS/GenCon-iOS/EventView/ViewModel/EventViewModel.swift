@@ -11,7 +11,7 @@ import RxSwift
 struct EventViewModel {
     let datas = Variable<[EventObject]>([])
     let request = Requests()
-    
+
     init() {
         updateDatas(date: DateUtils.stringFromDate(date: Date(), format: "yyyy-MM-dd"))
     }
@@ -26,7 +26,7 @@ struct EventViewModel {
             self.datas.value = data
         }
     }
-    
+
     func deleteEvent(id: String) {
         request.deleteEvent(id: id)
     }

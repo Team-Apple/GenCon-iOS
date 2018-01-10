@@ -29,7 +29,7 @@ class Requests {
     }
     
     func fetchTasks(startDate: String, callback: @escaping ([EventObject]) -> Void) {
-        Alamofire.request(baseURL + "events.json", method: .get, parameters: ["start_at_date": startDate])
+        Alamofire.request(baseURL + "tasks.json", method: .get, parameters: ["start_at_date": startDate])
             .responseJSON{ response in
                 if response.response?.statusCode == 200 {
                     var data: [EventObject] = []
