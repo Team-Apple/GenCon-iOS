@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="-1430" y="2037"/>
         </scene>
-        <!--NewEvent-->
+        <!--NewTask-->
         <scene sceneID="fne-cv-fXz">
             <objects>
-                <viewController id="TXE-ch-3DN" customClass="NewEventViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TXE-ch-3DN" customClass="NewTaskViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGG-pw-my4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="836"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +249,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgG-R8-4mf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="NewEvent" id="9Rb-fz-Wpa">
+                    <navigationItem key="navigationItem" title="NewTask" id="9Rb-fz-Wpa">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="UKf-dh-reB">
                             <connections>
                                 <action selector="back:" destination="TXE-ch-3DN" id="wZZ-VK-eqj"/>

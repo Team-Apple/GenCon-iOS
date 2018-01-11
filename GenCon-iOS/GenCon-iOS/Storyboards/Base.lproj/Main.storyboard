@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UtG-Vb-v7h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UtG-Vb-v7h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -245,7 +245,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TPy-Tx-yH8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Task" id="o49-UZ-e1P"/>
+                    <navigationItem key="navigationItem" title="Task" id="o49-UZ-e1P">
+                        <barButtonItem key="rightBarButtonItem" image="add" landscapeImage="add" largeContentSizeImage="add" id="AnT-Iw-r11">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="07C-T1-lYE" kind="presentation" id="6Ah-YK-NfC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="0KU-4b-oIs" id="V9o-eU-ezR"/>
@@ -254,6 +261,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxl-D8-4Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-644" y="1228"/>
+        </scene>
+        <!--NewTask-->
+        <scene sceneID="3ps-e4-qQU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewTask" id="07C-T1-lYE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aku-P1-4JY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="1707"/>
         </scene>
         <!--Task-->
         <scene sceneID="fHC-wx-o0k">

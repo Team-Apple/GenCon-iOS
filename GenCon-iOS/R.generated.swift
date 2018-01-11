@@ -122,7 +122,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `EditEvent`.
     static let editEvent = _R.storyboard.editEvent()
@@ -132,6 +132,8 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `NewEvent`.
     static let newEvent = _R.storyboard.newEvent()
+    /// Storyboard `NewTask`.
+    static let newTask = _R.storyboard.newTask()
     
     /// `UIStoryboard(name: "EditEvent", bundle: ...)`
     static func editEvent(_: Void = ()) -> UIKit.UIStoryboard {
@@ -151,6 +153,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "NewEvent", bundle: ...)`
     static func newEvent(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.newEvent)
+    }
+    
+    /// `UIStoryboard(name: "NewTask", bundle: ...)`
+    static func newTask(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.newTask)
     }
     
     fileprivate init() {}
@@ -187,6 +194,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
       try newEvent.validate()
+      try newTask.validate()
       try editEvent.validate()
     }
     
@@ -278,6 +286,19 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'send' is used in storyboard 'NewEvent', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct newTask: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+      
+      let bundle = R.hostingBundle
+      let name = "NewTask"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'send' is used in storyboard 'NewTask', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

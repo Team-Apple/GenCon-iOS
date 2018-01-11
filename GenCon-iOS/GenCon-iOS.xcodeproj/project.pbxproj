@@ -16,6 +16,7 @@
 		C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE7A1FA18265001D5B97 /* AnnounceViewModel.swift */; };
 		C93A95F22006FDFB000E17EC /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A95EF2006FDFB000E17EC /* NewTaskViewModel.swift */; };
 		C93A95F32006FDFB000E17EC /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A95F12006FDFB000E17EC /* NewTaskViewController.swift */; };
+		C93A95F520070196000E17EC /* NewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A95F420070196000E17EC /* NewTask.storyboard */; };
 		C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93D73051F85C8A9000AFE6C /* AppDelegate.swift */; };
 		C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D73091F85C8A9000AFE6C /* Main.storyboard */; };
 		C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93D730C1F85C8A9000AFE6C /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		C938EE7A1FA18265001D5B97 /* AnnounceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceViewModel.swift; sourceTree = "<group>"; };
 		C93A95EF2006FDFB000E17EC /* NewTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
 		C93A95F12006FDFB000E17EC /* NewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		C93A95F420070196000E17EC /* NewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewTask.storyboard; sourceTree = "<group>"; };
 		C93D73021F85C8A9000AFE6C /* GenCon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GenCon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93D73051F85C8A9000AFE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C93D730A1F85C8A9000AFE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				C972A7ED1FACF2E0002FF538 /* EditEvent.storyboard */,
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
+				C93A95F420070196000E17EC /* NewTask.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
+				C93A95F520070196000E17EC /* NewTask.storyboard in Resources */,
 				C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
