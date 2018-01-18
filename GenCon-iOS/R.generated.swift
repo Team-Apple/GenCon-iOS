@@ -102,7 +102,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
     /// This struct is generated for `EventViewController`, and contains static references to 1 segues.
     struct eventViewController {
@@ -119,13 +119,30 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This struct is generated for `TaskViewController`, and contains static references to 1 segues.
+    struct taskViewController {
+      /// Segue identifier `toEditTask`.
+      static let toEditTask: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TaskViewController, EditTaskViewController> = Rswift.StoryboardSegueIdentifier(identifier: "toEditTask")
+      
+      /// Optionally returns a typed version of segue `toEditTask`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func toEditTask(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TaskViewController, EditTaskViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.taskViewController.toEditTask, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
   struct storyboard {
     /// Storyboard `EditEvent`.
     static let editEvent = _R.storyboard.editEvent()
+    /// Storyboard `EditTask`.
+    static let editTask = _R.storyboard.editTask()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
@@ -138,6 +155,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "EditEvent", bundle: ...)`
     static func editEvent(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.editEvent)
+    }
+    
+    /// `UIStoryboard(name: "EditTask", bundle: ...)`
+    static func editTask(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.editTask)
     }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -193,9 +215,10 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
+      try editTask.validate()
       try newEvent.validate()
-      try newTask.validate()
       try editEvent.validate()
+      try newTask.validate()
     }
     
     struct editEvent: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -206,6 +229,19 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'send' is used in storyboard 'EditEvent', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct editTask: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = EditTaskViewController
+      
+      let bundle = R.hostingBundle
+      let name = "EditTask"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'send' is used in storyboard 'EditTask', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

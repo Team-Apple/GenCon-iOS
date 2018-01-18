@@ -30,6 +30,9 @@
 		C972A7F01FAD2301002FF538 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7EF1FAD2301002FF538 /* DateUtils.swift */; };
 		C972A7F31FAD2AF1002FF538 /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */; };
 		C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C97DD2071FCFA9FC00949D37 /* eventVec.svg */; };
+		C9A25B5520103D9900ACA9BD /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A25B5420103D9900ACA9BD /* EditTask.storyboard */; };
+		C9A25B5920103DF200ACA9BD /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A25B5820103DF200ACA9BD /* EditTaskViewController.swift */; };
+		C9A25B5C20103F7A00ACA9BD /* EditTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9C49BAC1FE218DD000B09FF /* taskVec.svg */; };
 		C9C49BB01FE21C2F000B09FF /* taskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C49BAF1FE21C2F000B09FF /* taskObject.swift */; };
@@ -68,6 +71,9 @@
 		C972A7EF1FAD2301002FF538 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		C972A7F21FAD2AF1002FF538 /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
 		C97DD2071FCFA9FC00949D37 /* eventVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventVec.svg; sourceTree = "<group>"; };
+		C9A25B5420103D9900ACA9BD /* EditTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTask.storyboard; sourceTree = "<group>"; };
+		C9A25B5820103DF200ACA9BD /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewModel.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9C49BAC1FE218DD000B09FF /* taskVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taskVec.svg; sourceTree = "<group>"; };
 		C9C49BAF1FE21C2F000B09FF /* taskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskObject.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 		C93D73041F85C8A9000AFE6C /* GenCon-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C9A25B5620103DD600ACA9BD /* EditTask */,
 				C93A95ED2006FDFB000E17EC /* NewTaskView */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
@@ -327,6 +334,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C9A25B5620103DD600ACA9BD /* EditTask */ = {
+			isa = PBXGroup;
+			children = (
+				C9A25B5A20103F6900ACA9BD /* ViewModel */,
+				C9A25B5720103DE200ACA9BD /* View */,
+			);
+			name = EditTask;
+			sourceTree = "<group>";
+		};
+		C9A25B5720103DE200ACA9BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9A25B5820103DF200ACA9BD /* EditTaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9A25B5A20103F6900ACA9BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9C49BAE1FE21C04000B09FF /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +383,7 @@
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
 				C93A95F420070196000E17EC /* NewTask.storyboard */,
+				C9A25B5420103D9900ACA9BD /* EditTask.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -440,6 +473,7 @@
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
+				C9A25B5520103D9900ACA9BD /* EditTask.storyboard in Resources */,
 				C93A95F520070196000E17EC /* NewTask.storyboard in Resources */,
 				C93D730B1F85C8A9000AFE6C /* Main.storyboard in Resources */,
 			);
@@ -545,6 +579,7 @@
 				C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */,
 				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
 				C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */,
+				C9A25B5C20103F7A00ACA9BD /* EditTaskViewModel.swift in Sources */,
 				C93A95F22006FDFB000E17EC /* NewTaskViewModel.swift in Sources */,
 				C938EE7E1FA18265001D5B97 /* AnnounceViewModel.swift in Sources */,
 				C9FD0C121FBDC93300E1C7B8 /* R.generated.swift in Sources */,
@@ -560,6 +595,7 @@
 				C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,
 				C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */,
+				C9A25B5920103DF200ACA9BD /* EditTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ struct TaskViewModel {
         }
     }
     
-    func deleteEvent(id: String) {
-        request.deleteEvent(id: id)
+    func deleteTask(id: String) {
+        request.deleteTask(id: id)
     }
 }

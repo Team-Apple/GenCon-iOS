@@ -255,6 +255,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="0KU-4b-oIs" id="V9o-eU-ezR"/>
+                        <segue destination="age-vk-z6L" kind="show" identifier="toEditTask" id="5Ru-Kx-NaS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxl-D8-4Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,6 +269,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aku-P1-4JY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-644" y="1707"/>
+        </scene>
+        <!--EditTask-->
+        <scene sceneID="9Ft-ox-xY4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditTask" id="age-vk-z6L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX3-Ak-pdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="1710"/>
         </scene>
         <!--Task-->
         <scene sceneID="fHC-wx-o0k">

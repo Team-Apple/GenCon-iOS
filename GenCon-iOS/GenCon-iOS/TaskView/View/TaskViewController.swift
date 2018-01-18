@@ -80,14 +80,22 @@ class TaskViewController: CalendarViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let destructiveAction = UIContextualAction(style: .destructive,title: "Delete") { (action, view, completionHandler) in
-            self.viewModel.deleteEvent(id: self.viewModel.datas.value[indexPath.row].id!)
+            self.viewModel.deleteTask(id: self.viewModel.datas.value[indexPath.row].id!)
             completionHandler(true)
         }
         let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
-            self.performSegue(withIdentifier: "toEditEvent",sender: indexPath.row)
+            self.performSegue(withIdentifier: "toEditTask",sender: indexPath.row)
             completionHandler(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [destructiveAction, detailAction])
         return configuration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toEditTask") {
+            let vc: EditTaskViewController = (segue.destination as? EditTaskViewController)!
+            let data = self.viewModel.datas.value[sender as! Int]
+            vc.data = data
+        }
     }
 }
