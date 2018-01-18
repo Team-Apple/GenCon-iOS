@@ -20,7 +20,7 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var endTime: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
-    var viewModel = NewEventViewModel()
+    var viewModel = NewTaskViewModel()
     var disposeBag = DisposeBag()
 
     override func viewDidLoad() {

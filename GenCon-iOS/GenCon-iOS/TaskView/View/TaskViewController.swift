@@ -41,7 +41,7 @@ class TaskViewController: CalendarViewController, UITableViewDelegate {
             .bind(to: tableView.rx.items(cellIdentifier: "Cell")) { (row, element, cell) in
                 (cell.viewWithTag(1) as! UILabel).text = element.eventTitle
                 (cell.viewWithTag(2) as! UILabel).text = "開始時 " + element.startDateTime!
-                (cell.viewWithTag(3) as! UILabel).text = "終了時 " + element.endDateTime!
+                (cell.viewWithTag(3) as! UILabel).text = "終了時 " + element.deadline!
             }
             .disposed(by: disposeBag)
         

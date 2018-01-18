@@ -26,6 +26,6 @@ struct NewTaskViewModel {
     }
     
     func saveEvent() {
-        request.saveEvent(params: ["title": title.value, "start_at_date": startDate!, "start_at_time": startTime!, "end_at_date": endDate!, "end_at_time": endTime!, "memo": memo.value, "priority": "normal"])
+        request.saveTask(params: ["title": title.value, "start_from_date": startDate!, "start_from_time": startTime!, "deadline_date": endDate!, "deadline_time": endTime!, "memo": memo.value, "priority": "normal"])
     }
 }

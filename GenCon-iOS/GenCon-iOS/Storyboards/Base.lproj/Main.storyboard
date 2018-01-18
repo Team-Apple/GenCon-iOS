@@ -30,7 +30,6 @@
                     <connections>
                         <segue destination="PXQ-bK-Nhr" kind="relationship" relationship="viewControllers" id="D9a-TW-iUO"/>
                         <segue destination="IPR-sJ-ZVu" kind="relationship" relationship="viewControllers" id="Stb-bC-0eZ"/>
-                        <segue destination="LWu-mS-VCx" kind="relationship" relationship="viewControllers" id="70A-8N-LTK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8V-1r-5SB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +65,7 @@
                 <viewControllerPlaceholder storyboardName="EditEvent" id="Mtr-fb-fmn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsB-cR-DdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1582" y="1735"/>
+            <point key="canvasLocation" x="-1582" y="1706"/>
         </scene>
         <!--Event-->
         <scene sceneID="pDZ-n5-XC3">
@@ -170,7 +169,7 @@
                 <viewControllerPlaceholder storyboardName="NewEvent" id="LId-te-gbI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cqz-XF-V3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1310" y="1736"/>
+            <point key="canvasLocation" x="-1311" y="1706"/>
         </scene>
         <!--Task-->
         <scene sceneID="fca-oq-5gk">

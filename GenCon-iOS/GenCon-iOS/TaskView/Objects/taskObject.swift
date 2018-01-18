@@ -11,7 +11,7 @@ import ObjectMapper
 class TaskObject: Mappable {
     var eventTitle:     String?
     var startDateTime:  String?
-    var endDateTime:    String?
+    var deadline:    String?
     var memo:           String?
     var priority:       String?
     var id:             String?
@@ -22,7 +22,7 @@ class TaskObject: Mappable {
     func mapping(map: Map) {
         eventTitle      <- map["title"]
         startDateTime   <- map["start_at"]
-        endDateTime     <- map["deadline"]
+        deadline     <- map["deadline"]
         memo            <- map["memo"]
         priority        <- map["priority"]
         id              <- map["id"]

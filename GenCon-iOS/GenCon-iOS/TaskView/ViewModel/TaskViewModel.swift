@@ -9,7 +9,7 @@
 import RxSwift
 
 struct TaskViewModel {
-    let datas = Variable<[EventObject]>([])
+    let datas = Variable<[TaskObject]>([])
     let request = Requests()
     
     init() {
@@ -21,7 +21,7 @@ struct TaskViewModel {
     }
     
     func updateDatas(date: String) {
-        request.fetchEvents(startDate: date.replacingOccurrences(of: "/", with: "-")) { (data: [EventObject]) in
+        request.fetchTasks(startDate: date.replacingOccurrences(of: "/", with: "-")) { (data: [TaskObject]) in
             self.datas.value.removeAll()
             self.datas.value = data
         }
