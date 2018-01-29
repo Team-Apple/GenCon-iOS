@@ -22,7 +22,7 @@ class TaskViewController: CalendarViewController, UITableViewDelegate {
         super.viewDidLoad()
         bindViewAndViewModel()
         tableView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(EventViewController.refresh(sender:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(TaskViewController.refresh(sender:)), for: .valueChanged)
         tableView.delegate = self
     }
     

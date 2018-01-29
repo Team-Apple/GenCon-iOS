@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9253C17201F28BF008C156E /* AnnounceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C16201F28BF008C156E /* AnnounceObject.swift */; };
+		C9253C19201F8514008C156E /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C18201F8514008C156E /* UIImage+Size.swift */; };
 		C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE661FA1791B001D5B97 /* CalendarViewController.swift */; };
 		C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */; };
 		C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6F1FA18084001D5B97 /* EventViewModel.swift */; };
@@ -35,7 +37,7 @@
 		C9A25B5C20103F7A00ACA9BD /* EditTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9C49BAC1FE218DD000B09FF /* taskVec.svg */; };
-		C9C49BB01FE21C2F000B09FF /* taskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C49BAF1FE21C2F000B09FF /* taskObject.swift */; };
+		C9C49BB01FE21C2F000B09FF /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C49BAF1FE21C2F000B09FF /* TaskObject.swift */; };
 		C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E8538F1FAB918600916848 /* NewEvent.storyboard */; };
 		C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E853921FAB95AA00916848 /* NewEventViewModel.swift */; };
 		C9E9F8021F98AE0600C0E696 /* UIColor+hex+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		6CF7742387EDBDFB713ECC1F /* Pods-GenCon-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenCon-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenCon-iOS/Pods-GenCon-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenCon_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9253C16201F28BF008C156E /* AnnounceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceObject.swift; sourceTree = "<group>"; };
+		C9253C18201F8514008C156E /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		C938EE661FA1791B001D5B97 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C938EE6F1FA18084001D5B97 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
@@ -76,7 +80,7 @@
 		C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewModel.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9C49BAC1FE218DD000B09FF /* taskVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taskVec.svg; sourceTree = "<group>"; };
-		C9C49BAF1FE21C2F000B09FF /* taskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskObject.swift; sourceTree = "<group>"; };
+		C9C49BAF1FE21C2F000B09FF /* TaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
 		C9E8538F1FAB918600916848 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		C9E853921FAB95AA00916848 /* NewEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewModel.swift; sourceTree = "<group>"; };
 		C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex+rgb.swift"; sourceTree = "<group>"; };
@@ -103,6 +107,14 @@
 				6CF7742387EDBDFB713ECC1F /* Pods-GenCon-iOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9253C15201F28BF008C156E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C9253C16201F28BF008C156E /* AnnounceObject.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		C938EE651FA1791B001D5B97 /* CalendarViewController */ = {
@@ -176,6 +188,7 @@
 		C938EE761FA18265001D5B97 /* AnnounceView */ = {
 			isa = PBXGroup;
 			children = (
+				C9253C15201F28BF008C156E /* Objects */,
 				C938EE771FA18265001D5B97 /* View */,
 				C938EE791FA18265001D5B97 /* ViewModel */,
 			);
@@ -245,16 +258,16 @@
 			isa = PBXGroup;
 			children = (
 				C9A25B5620103DD600ACA9BD /* EditTask */,
+				C938EE711FA18264001D5B97 /* TaskView */,
 				C93A95ED2006FDFB000E17EC /* NewTaskView */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
 				C972A7E91FACECE8002FF538 /* EditEvent */,
 				C938EE6A1FA17C49001D5B97 /* EventView */,
+				C9529DA21FAAA28500E34BD9 /* NewEventView */,
 				C9429AFA1FA0D30A009DE5A8 /* Extentions */,
 				C9432D681FA7091F00C4FB86 /* Models */,
-				C9529DA21FAAA28500E34BD9 /* NewEventView */,
 				C9E8538E1FAB90F400916848 /* Storyboards */,
-				C938EE711FA18264001D5B97 /* TaskView */,
 				C9D8CC761FD8E4DA00C143C7 /* resource */,
 				C93D73051F85C8A9000AFE6C /* AppDelegate.swift */,
 				C93D730C1F85C8A9000AFE6C /* Assets.xcassets */,
@@ -272,6 +285,7 @@
 				C9429AF81FA0D305009DE5A8 /* DeviceSize.swift */,
 				C9E9F8011F98AE0600C0E696 /* UIColor+hex+rgb.swift */,
 				C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */,
+				C9253C18201F8514008C156E /* UIImage+Size.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -362,7 +376,7 @@
 		C9C49BAE1FE21C04000B09FF /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C9C49BAF1FE21C2F000B09FF /* taskObject.swift */,
+				C9C49BAF1FE21C2F000B09FF /* TaskObject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -573,11 +587,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */,
-				C9C49BB01FE21C2F000B09FF /* taskObject.swift in Sources */,
+				C9C49BB01FE21C2F000B09FF /* TaskObject.swift in Sources */,
 				C93A95F32006FDFB000E17EC /* NewTaskViewController.swift in Sources */,
 				C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */,
+				C9253C19201F8514008C156E /* UIImage+Size.swift in Sources */,
 				C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */,
 				C938EE7B1FA18265001D5B97 /* TaskViewController.swift in Sources */,
+				C9253C17201F28BF008C156E /* AnnounceObject.swift in Sources */,
 				C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */,
 				C9A25B5C20103F7A00ACA9BD /* EditTaskViewModel.swift in Sources */,
 				C93A95F22006FDFB000E17EC /* NewTaskViewModel.swift in Sources */,

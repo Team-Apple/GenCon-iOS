@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "add")
@@ -56,10 +56,16 @@ struct R: Rswift.Validatable {
     static let announce = Rswift.ImageResource(bundle: R.hostingBundle, name: "announce")
     /// Image `event`.
     static let event = Rswift.ImageResource(bundle: R.hostingBundle, name: "event")
+    /// Image `exchange`.
+    static let exchange = Rswift.ImageResource(bundle: R.hostingBundle, name: "exchange")
     /// Image `send`.
     static let send = Rswift.ImageResource(bundle: R.hostingBundle, name: "send")
     /// Image `task`.
     static let task = Rswift.ImageResource(bundle: R.hostingBundle, name: "task")
+    /// Image `trash`.
+    static let trash = Rswift.ImageResource(bundle: R.hostingBundle, name: "trash")
+    /// Image `weather`.
+    static let weather = Rswift.ImageResource(bundle: R.hostingBundle, name: "weather")
     
     /// `UIImage(named: "add", bundle: ..., traitCollection: ...)`
     static func add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -76,6 +82,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.event, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "exchange", bundle: ..., traitCollection: ...)`
+    static func exchange(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.exchange, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "send", bundle: ..., traitCollection: ...)`
     static func send(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.send, compatibleWith: traitCollection)
@@ -84,6 +95,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "task", bundle: ..., traitCollection: ...)`
     static func task(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.task, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "trash", bundle: ..., traitCollection: ...)`
+    static func trash(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.trash, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "weather", bundle: ..., traitCollection: ...)`
+    static func weather(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.weather, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}

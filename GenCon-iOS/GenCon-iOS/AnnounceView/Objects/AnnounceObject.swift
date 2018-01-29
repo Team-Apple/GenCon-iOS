@@ -10,19 +10,49 @@ import ObjectMapper
 
 class AnnounceObject: Mappable {
     var date:     String?
-    var startDateTime:  String?
-    var deadline:    String?
-    var id:             String?
+    var timing:  Bool? {
+        didSet {
+            if timing! {
+                timingStr = "家を出るとき"
+            } else {
+                timingStr = "家に帰ったとき"
+            }
+        }
+    }
+    var timingStr = ""
+    var mode:    String? {
+        didSet {
+            if mode != nil {
+                switch mode! {
+                case "weather":
+                    mode = "天気"
+                    modeIcon = "weather"
+                    modeIcon = "#ff9800"
+                case "trash":
+                    mode = "ゴミ出し"
+                    modeIcon = "trash"
+                    modeColor = "#f44336"
+                case "exchange":
+                    mode = "為替"
+                    modeIcon = "exchange"
+                    modeColor = "#ffeb3b"
+                default:
+                    mode = ""
+                }
+            }
+        }
+    }
+    var modeIcon: String = "weather"
+    var modeColor: String = "#f44336"
+    var id:      String?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        eventTitle      <- map["title"]
-        startDateTime   <- map["start_at"]
-        deadline     <- map["deadline"]
-        memo            <- map["memo"]
-        priority        <- map["priority"]
-        id              <- map["id"]
+        date        <- map["date"]
+        timing      <- map["timing"]
+        mode        <- map["mode"]
+        id          <- map["id"]
     }
 }
