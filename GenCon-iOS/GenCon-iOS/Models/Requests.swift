@@ -106,6 +106,17 @@ class Requests {
         }
     }
     
+    func deleteAnnounce(id: String) {
+        Alamofire.request(baseURL + "announcements/" + id, method: .delete)
+            .responseString { response in
+                if response.response?.statusCode == 200 {
+                    print("delete ok")
+                }else if response.response?.statusCode == 500 {
+                    print("error 500")
+                }
+        }
+    }
+    
     func update(params: [String: String], model: String, id: String) {
         Alamofire.request(baseURL + model + "/" + id, method: .put, parameters: params, encoding: JSONEncoding.default, headers: nil)
             .responseString { response in

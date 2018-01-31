@@ -82,11 +82,11 @@ class AnnounceViewController: UIViewController ,UITableViewDelegate {
             self.viewModel.deleteTask(id: self.viewModel.datas.value[indexPath.row].id!)
             completionHandler(true)
         }
-        let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
+        /*let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
             self.performSegue(withIdentifier: "toEditTask",sender: indexPath.row)
             completionHandler(true)
-        }
-        let configuration = UISwipeActionsConfiguration(actions: [destructiveAction, detailAction])
+        }*/
+        let configuration = UISwipeActionsConfiguration(actions: [destructiveAction])
         return configuration
     }
     

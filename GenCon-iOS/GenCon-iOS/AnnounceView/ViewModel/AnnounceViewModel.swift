@@ -26,7 +26,7 @@ struct AnnounceViewModel {
         }
     }
     
-    func deleteTask(id: String) {
-        request.deleteTask(id: id)
+    func deleteAnnounce(id: String) {
+        request.deleteAnnounce(id: id)
     }
 }
