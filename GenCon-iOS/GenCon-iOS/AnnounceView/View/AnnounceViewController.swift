@@ -42,7 +42,7 @@ class AnnounceViewController: CalendarViewController, UITableViewDelegate {
                 (cell.viewWithTag(1) as! UILabel).text = element.mode!
                 (cell.viewWithTag(2) as! UILabel).text = element.timingStr
                 (cell.viewWithTag(3) as! UIImageView).image = UIImage(named: element.modeIcon)
-                (cell.viewWithTag(4) as! UIView).backgroundColor = UIColor.hex(hexStr: element.modeColor, alpha: 1)
+                (cell.viewWithTag(4))?.backgroundColor = UIColor.hex(hexStr: element.modeColor, alpha: 1)
             }
             .disposed(by: disposeBag)
         
