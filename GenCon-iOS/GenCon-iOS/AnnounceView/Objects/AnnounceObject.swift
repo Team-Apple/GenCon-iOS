@@ -27,7 +27,7 @@ class AnnounceObject: Mappable {
                 case "weather":
                     mode = "天気"
                     modeIcon = "weather"
-                    modeIcon = "#ff9800"
+                    modeColor = "#ff9800"
                 case "trash":
                     mode = "ゴミ出し"
                     modeIcon = "trash"
