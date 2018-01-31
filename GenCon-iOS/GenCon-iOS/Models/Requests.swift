@@ -44,8 +44,8 @@ class Requests {
         }
     }
     
-    func fetchAnnounce(date: String, callback: @escaping ([AnnounceObject]) -> Void) {
-        Alamofire.request(baseURL + "announcements.json", method: .get, parameters: ["date": date])
+    func fetchAnnounce(callback: @escaping ([AnnounceObject]) -> Void) {
+        Alamofire.request(baseURL + "announcements.json", method: .get)
             .responseJSON{ response in
                 if response.response?.statusCode == 200 {
                     var data: [AnnounceObject] = []
