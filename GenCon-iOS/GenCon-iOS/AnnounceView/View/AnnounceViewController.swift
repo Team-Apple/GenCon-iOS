@@ -12,11 +12,16 @@ import RxCocoa
 import Koyomi
 import SVGKit
 
-class AnnounceViewController: CalendarViewController, UITableViewDelegate {
+class AnnounceViewController: UIViewController ,UITableViewDelegate {
     let viewModel = AnnounceViewModel()
     let disposeBag   = DisposeBag()
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.updateDatas()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,20 +59,13 @@ class AnnounceViewController: CalendarViewController, UITableViewDelegate {
             .disposed(by: disposeBag)
     }
     
-    func koyomi(_ koyomi: Koyomi, didSelect date: Date?, forItemAt indexPath: IndexPath) {
-        selectedDate = date!
-        self.isNavTapped = false
-        view.viewWithTag(256)?.removeFromSuperview()
-        viewModel.updateDatas(date: selectedDateStr)
-    }
-    
     func setEmptyStateView() -> UIView {
         let emptyStateView = UIView()
         emptyStateView.frame = CGRect(x: self.tableView.bounds.width / 4, y: self.tableView.bounds.width / 2, width: self.tableView.bounds.width / 2, height: self.tableView.bounds.width / 2)
         emptyStateView.backgroundColor = UIColor.gray
         let eventImageView = UIImageView(frame: emptyStateView.frame)
         eventImageView.image = R.image.event()
-        let svgImage = SVGKImage(named: "taskVec")
+        let svgImage = SVGKImage(named: "annoVec")
         svgImage?.size = emptyStateView.bounds.size
         eventImageView.image = svgImage?.uiImage
         emptyStateView.addSubview(eventImageView)
@@ -75,7 +73,7 @@ class AnnounceViewController: CalendarViewController, UITableViewDelegate {
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        viewModel.updateDatas(date: selectedDateStr)
+        viewModel.updateDatas()
         sender.endRefreshing()
     }
     

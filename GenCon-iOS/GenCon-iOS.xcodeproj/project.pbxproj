@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C9253C17201F28BF008C156E /* AnnounceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C16201F28BF008C156E /* AnnounceObject.swift */; };
 		C9253C19201F8514008C156E /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C18201F8514008C156E /* UIImage+Size.swift */; };
+		C9253C2420220F8C008C156E /* annoVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9253C2320220F8C008C156E /* annoVec.svg */; };
 		C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE661FA1791B001D5B97 /* CalendarViewController.swift */; };
 		C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */; };
 		C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6F1FA18084001D5B97 /* EventViewModel.swift */; };
@@ -50,6 +51,7 @@
 		B50473EDB76B6BCD680DB1AC /* Pods_GenCon_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenCon_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9253C16201F28BF008C156E /* AnnounceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceObject.swift; sourceTree = "<group>"; };
 		C9253C18201F8514008C156E /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		C9253C2320220F8C008C156E /* annoVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = annoVec.svg; sourceTree = "<group>"; };
 		C938EE661FA1791B001D5B97 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C938EE6F1FA18084001D5B97 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				C97DD2071FCFA9FC00949D37 /* eventVec.svg */,
+				C9253C2320220F8C008C156E /* annoVec.svg */,
 				C9C49BAC1FE218DD000B09FF /* taskVec.svg */,
 			);
 			path = resource;
@@ -484,6 +487,7 @@
 				C97DD2081FCFA9FC00949D37 /* eventVec.svg in Resources */,
 				C93D73101F85C8A9000AFE6C /* LaunchScreen.storyboard in Resources */,
 				C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */,
+				C9253C2420220F8C008C156E /* annoVec.svg in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
