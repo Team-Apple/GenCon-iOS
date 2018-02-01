@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             events = NSKeyedUnarchiver.unarchiveObject(with: self.ud.object(forKey: "events") as! Data) as! [EventObject]
             for i in events {
                 if i.isNotifi == false {
-                    notifi.set(text: i.eventTitle!, date: i.startDateTime!)
+                    notifi.set(mode: "イベント", text: i.eventTitle!, date: i.startDateTime!)
                     i.isNotifi = true
                 }
             }

@@ -10,7 +10,7 @@ import Foundation
 import UserNotifications
 
 class Notifi {
-    func set(text: String, date: String) {
+    func set(mode: String, text: String, date: String) {
         //　通知設定に必要なクラスをインスタンス化
         let trigger: UNNotificationTrigger
         let content = UNMutableNotificationContent()
@@ -28,7 +28,7 @@ class Notifi {
         trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         
         // 通知内容の設定
-        content.title = ""
+        content.title = mode
         content.body = text
         content.sound = UNNotificationSound.default()
 
