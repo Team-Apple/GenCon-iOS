@@ -79,7 +79,7 @@ class AnnounceViewController: UIViewController ,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let destructiveAction = UIContextualAction(style: .destructive,title: "Delete") { (action, view, completionHandler) in
-            self.viewModel.deleteTask(id: self.viewModel.datas.value[indexPath.row].id!)
+            self.viewModel.deleteAnnounce(id: self.viewModel.datas.value[indexPath.row].id!)
             completionHandler(true)
         }
         /*let detailAction = UIContextualAction(style: .normal,title: "Detail") { (action, view, completionHandler) in
