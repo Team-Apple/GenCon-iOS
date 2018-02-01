@@ -17,18 +17,21 @@ class Notifi {
         var notificationTime = DateComponents()
         
         // トリガー設定
-        notificationTime.year = 2018
-        notificationTime.month = 2
-        notificationTime.day = 1
-        notificationTime.hour = 12
-        notificationTime.minute = 0
-        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let date = date.components(separatedBy: " ")[0]
+        let time = date.components(separatedBy: " ")[1]
+        notificationTime.year = Int(date.components(separatedBy: "-")[0])
+        notificationTime.month = Int(date.components(separatedBy: "-")[1])
+        notificationTime.day = Int(date.components(separatedBy: "-")[2])
+        notificationTime.hour = Int(time.components(separatedBy: ":")[0])
+        notificationTime.minute = Int(time.components(separatedBy: ":")[1])
+        notificationTime.second = Int(time.components(separatedBy: ":")[2])
+        trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         
         // 通知内容の設定
         content.title = ""
-        content.body = ""
+        content.body = text
         content.sound = UNNotificationSound.default()
-        
+
         // 通知スタイルを指定
         let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
         // 通知をセット
