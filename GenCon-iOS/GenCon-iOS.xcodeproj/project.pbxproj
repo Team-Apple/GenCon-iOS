@@ -39,6 +39,7 @@
 		C9A25B5520103D9900ACA9BD /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A25B5420103D9900ACA9BD /* EditTask.storyboard */; };
 		C9A25B5920103DF200ACA9BD /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A25B5820103DF200ACA9BD /* EditTaskViewController.swift */; };
 		C9A25B5C20103F7A00ACA9BD /* EditTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */; };
+		C9BF008F20230C380040870C /* Notifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF008E20230C380040870C /* Notifi.swift */; };
 		C9C141C81FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */; };
 		C9C49BAD1FE218DD000B09FF /* taskVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9C49BAC1FE218DD000B09FF /* taskVec.svg */; };
 		C9C49BB01FE21C2F000B09FF /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C49BAF1FE21C2F000B09FF /* TaskObject.swift */; };
@@ -86,6 +87,7 @@
 		C9A25B5420103D9900ACA9BD /* EditTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTask.storyboard; sourceTree = "<group>"; };
 		C9A25B5820103DF200ACA9BD /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		C9A25B5B20103F7A00ACA9BD /* EditTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewModel.swift; sourceTree = "<group>"; };
+		C9BF008E20230C380040870C /* Notifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifi.swift; sourceTree = "<group>"; };
 		C9C141C71FA31B8400C75132 /* UINavigationController+InvisibleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleBorder.swift"; sourceTree = "<group>"; };
 		C9C49BAC1FE218DD000B09FF /* taskVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taskVec.svg; sourceTree = "<group>"; };
 		C9C49BAF1FE21C2F000B09FF /* TaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				C9432D691FA7093900C4FB86 /* Requests.swift */,
+				C9BF008E20230C380040870C /* Notifi.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				C972A7F01FAD2301002FF538 /* DateUtils.swift in Sources */,
 				C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,
+				C9BF008F20230C380040870C /* Notifi.swift in Sources */,
 				C9432D6E1FA711CF00C4FB86 /* EventObject.swift in Sources */,
 				C9A25B5920103DF200ACA9BD /* EditTaskViewController.swift in Sources */,
 			);
