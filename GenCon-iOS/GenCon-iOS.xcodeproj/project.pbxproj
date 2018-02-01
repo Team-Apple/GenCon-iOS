@@ -10,6 +10,9 @@
 		C9253C17201F28BF008C156E /* AnnounceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C16201F28BF008C156E /* AnnounceObject.swift */; };
 		C9253C19201F8514008C156E /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C18201F8514008C156E /* UIImage+Size.swift */; };
 		C9253C2420220F8C008C156E /* annoVec.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9253C2320220F8C008C156E /* annoVec.svg */; };
+		C9253C262022D511008C156E /* NewAnnounce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9253C252022D511008C156E /* NewAnnounce.storyboard */; };
+		C9253C2C2022DD0F008C156E /* NewAnnounceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C292022DD0F008C156E /* NewAnnounceViewModel.swift */; };
+		C9253C2D2022DD0F008C156E /* NewAnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9253C2B2022DD0F008C156E /* NewAnnounceViewController.swift */; };
 		C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE661FA1791B001D5B97 /* CalendarViewController.swift */; };
 		C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */; };
 		C938EE701FA18084001D5B97 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938EE6F1FA18084001D5B97 /* EventViewModel.swift */; };
@@ -52,6 +55,9 @@
 		C9253C16201F28BF008C156E /* AnnounceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceObject.swift; sourceTree = "<group>"; };
 		C9253C18201F8514008C156E /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		C9253C2320220F8C008C156E /* annoVec.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = annoVec.svg; sourceTree = "<group>"; };
+		C9253C252022D511008C156E /* NewAnnounce.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAnnounce.storyboard; sourceTree = "<group>"; };
+		C9253C292022DD0F008C156E /* NewAnnounceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnnounceViewModel.swift; sourceTree = "<group>"; };
+		C9253C2B2022DD0F008C156E /* NewAnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnnounceViewController.swift; sourceTree = "<group>"; };
 		C938EE661FA1791B001D5B97 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C938EE6C1FA17CF9001D5B97 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C938EE6F1FA18084001D5B97 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
@@ -117,6 +123,31 @@
 				C9253C16201F28BF008C156E /* AnnounceObject.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		C9253C272022DD0F008C156E /* NewAnnounceView */ = {
+			isa = PBXGroup;
+			children = (
+				C9253C282022DD0F008C156E /* ViewModel */,
+				C9253C2A2022DD0F008C156E /* View */,
+			);
+			path = NewAnnounceView;
+			sourceTree = "<group>";
+		};
+		C9253C282022DD0F008C156E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9253C292022DD0F008C156E /* NewAnnounceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9253C2A2022DD0F008C156E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9253C2B2022DD0F008C156E /* NewAnnounceViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C938EE651FA1791B001D5B97 /* CalendarViewController */ = {
@@ -262,6 +293,7 @@
 				C9A25B5620103DD600ACA9BD /* EditTask */,
 				C938EE711FA18264001D5B97 /* TaskView */,
 				C93A95ED2006FDFB000E17EC /* NewTaskView */,
+				C9253C272022DD0F008C156E /* NewAnnounceView */,
 				C938EE761FA18265001D5B97 /* AnnounceView */,
 				C938EE651FA1791B001D5B97 /* CalendarViewController */,
 				C972A7E91FACECE8002FF538 /* EditEvent */,
@@ -400,6 +432,7 @@
 				C93D73091F85C8A9000AFE6C /* Main.storyboard */,
 				C9E8538F1FAB918600916848 /* NewEvent.storyboard */,
 				C93A95F420070196000E17EC /* NewTask.storyboard */,
+				C9253C252022D511008C156E /* NewAnnounce.storyboard */,
 				C9A25B5420103D9900ACA9BD /* EditTask.storyboard */,
 			);
 			path = Storyboards;
@@ -490,6 +523,7 @@
 				C9253C2420220F8C008C156E /* annoVec.svg in Resources */,
 				C93D730D1F85C8A9000AFE6C /* Assets.xcassets in Resources */,
 				C972A7EE1FACF2E0002FF538 /* EditEvent.storyboard in Resources */,
+				C9253C262022D511008C156E /* NewAnnounce.storyboard in Resources */,
 				C9E853901FAB918600916848 /* NewEvent.storyboard in Resources */,
 				C9A25B5520103D9900ACA9BD /* EditTask.storyboard in Resources */,
 				C93A95F520070196000E17EC /* NewTask.storyboard in Resources */,
@@ -592,6 +626,7 @@
 			files = (
 				C938EE6D1FA17CF9001D5B97 /* EventViewController.swift in Sources */,
 				C9C49BB01FE21C2F000B09FF /* TaskObject.swift in Sources */,
+				C9253C2C2022DD0F008C156E /* NewAnnounceViewModel.swift in Sources */,
 				C93A95F32006FDFB000E17EC /* NewTaskViewController.swift in Sources */,
 				C9E853931FAB95AA00916848 /* NewEventViewModel.swift in Sources */,
 				C9253C19201F8514008C156E /* UIImage+Size.swift in Sources */,
@@ -611,6 +646,7 @@
 				C938EE7D1FA18265001D5B97 /* AnnounceViewController.swift in Sources */,
 				C938EE7C1FA18265001D5B97 /* TaskViewModel.swift in Sources */,
 				C9432D6A1FA7093900C4FB86 /* Requests.swift in Sources */,
+				C9253C2D2022DD0F008C156E /* NewAnnounceViewController.swift in Sources */,
 				C972A7F01FAD2301002FF538 /* DateUtils.swift in Sources */,
 				C938EE671FA1791B001D5B97 /* CalendarViewController.swift in Sources */,
 				C93D73061F85C8A9000AFE6C /* AppDelegate.swift in Sources */,

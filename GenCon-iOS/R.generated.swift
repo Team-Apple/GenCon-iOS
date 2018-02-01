@@ -166,7 +166,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
     /// Storyboard `EditEvent`.
     static let editEvent = _R.storyboard.editEvent()
@@ -176,6 +176,8 @@ struct R: Rswift.Validatable {
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `NewAnnounce`.
+    static let newAnnounce = _R.storyboard.newAnnounce()
     /// Storyboard `NewEvent`.
     static let newEvent = _R.storyboard.newEvent()
     /// Storyboard `NewTask`.
@@ -199,6 +201,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    /// `UIStoryboard(name: "NewAnnounce", bundle: ...)`
+    static func newAnnounce(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.newAnnounce)
     }
     
     /// `UIStoryboard(name: "NewEvent", bundle: ...)`
@@ -243,10 +250,11 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try newAnnounce.validate()
       try main.validate()
+      try editEvent.validate()
       try editTask.validate()
       try newEvent.validate()
-      try editEvent.validate()
       try newTask.validate()
     }
     
@@ -338,6 +346,19 @@ struct _R: Rswift.Validatable {
         if _R.storyboard.main().eventController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventController' could not be loaded from storyboard 'Main' as 'EventViewController'.") }
         if _R.storyboard.main().task() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'task' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().taskController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'taskController' could not be loaded from storyboard 'Main' as 'TaskViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct newAnnounce: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+      
+      let bundle = R.hostingBundle
+      let name = "NewAnnounce"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "send") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'send' is used in storyboard 'NewAnnounce', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

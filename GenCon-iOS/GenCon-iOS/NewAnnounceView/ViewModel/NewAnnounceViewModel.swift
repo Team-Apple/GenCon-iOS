@@ -9,23 +9,15 @@
 import RxSwift
 
 struct NewAnnounceViewModel {
-    var title = Variable("")
-    var memo = Variable("")
-    var priority: String? = "1"
-    var startDate: String?
-    var startTime: String?
-    var endDate: String?
-    var endTime: String?
+    var timing = Variable<Bool>(true)
+    var mode = Variable<String>("weather")
+    
     let request = Requests()
     
     init() {
-        startDate = DateUtils.stringFromDate(date: Date(), format: "yyyy-MM-dd")
-        endDate = DateUtils.stringFromDate(date: Date(), format: "yyyy-MM-dd")
-        startTime = DateUtils.stringFromDate(date: Date(), format: "HH:mm")
-        endTime = DateUtils.stringFromDate(date: Date(), format: "HH:mm")
     }
     
     func saveEvent() {
-        request.saveTask(params: ["title": title.value, "start_from_date": startDate!, "start_from_time": startTime!, "deadline_date": endDate!, "deadline_time": endTime!, "memo": memo.value, "priority": "normal"])
+        request.saveAnnounce(params: ["mode": mode.value, "timing": timing.value])
     }
 }

@@ -279,6 +279,14 @@
             </objects>
             <point key="canvasLocation" x="-430" y="1710"/>
         </scene>
+        <!--NewAnnounce-->
+        <scene sceneID="WYo-TM-6Ej">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewAnnounce" id="MY8-Ai-R40" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agZ-v2-dgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="1696"/>
+        </scene>
         <!--Task-->
         <scene sceneID="fHC-wx-o0k">
             <objects>
@@ -420,6 +428,9 @@
                     <navigationItem key="navigationItem" title="Announce" id="Q9t-Bl-6x5">
                         <barButtonItem key="rightBarButtonItem" image="add" id="SH3-jT-oth">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="MY8-Ai-R40" kind="presentation" id="v44-y8-SPI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

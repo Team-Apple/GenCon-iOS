@@ -15,45 +15,48 @@ class NewAnnounceViewController: UIViewController {
     @IBOutlet weak var timing: UIPickerView!
     @IBOutlet weak var mode: UIPickerView!
 
-    var viewModel = NewTaskViewModel()
+    var viewModel = NewAnnounceViewModel()
     var disposeBag = DisposeBag()
-
+    var timingList = ["家を出るとき","家に帰ったとき"]
+    var modeList = ["天気","ゴミ出し","為替"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewAndViewModel()
     }
 
     func bindViewAndViewModel() {
-        eventTitle.rx.text.orEmpty.bind(to: viewModel.title).disposed(by: disposeBag)
-        memo.rx.text.orEmpty.bind(to: viewModel.memo).disposed(by: disposeBag)
-        
-        Observable.combineLatest(eventTitle.rx.text.orEmpty.asObservable(), memo.rx.text.orEmpty.asObservable()){
-                $0.count > 0 && $1.count > 0
+        Observable.just(timingList)
+            .bind(to: timing.rx.itemTitles) { _, item in
+                return item
             }
-            .bind(to: saveButton.rx.isEnabled)
             .disposed(by: disposeBag)
-        
-        startDate.rx.date.asObservable()
-            .bind(onNext: { date in
-                self.viewModel.startDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
+        timing.rx.modelSelected(String.self)
+            .subscribe(onNext: { modal in
+                if modal[0] == "家を出るとき" {
+                    self.viewModel.timing.value = true
+                } else {
+                    self.viewModel.timing.value = false
+                }
             })
             .disposed(by: disposeBag)
-
-        endDate.rx.date.asObservable()
-            .bind(onNext: { date in
-                self.viewModel.endDate = DateUtils.stringFromDate(date: date, format: "yyyy-MM-dd")
-            })
+        Observable.just(modeList)
+            .bind(to: mode.rx.itemTitles) { _, item in
+                return item
+            }
             .disposed(by: disposeBag)
-        
-        startTime.rx.date.asObservable()
-            .bind(onNext: { date in
-                self.viewModel.startTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
-            })
-            .disposed(by: disposeBag)
-        
-        endTime.rx.date.asObservable()
-            .bind(onNext: { date in
-                self.viewModel.endTime = DateUtils.stringFromDate(date: date, format: "HH:mm")
+        mode.rx.modelSelected(String.self)
+            .subscribe(onNext: { modal in
+                switch modal[0] {
+                case "天気":
+                    self.viewModel.mode.value = "weather"
+                case "ゴミ出し":
+                    self.viewModel.mode.value = "trash"
+                case "為替":
+                    self.viewModel.mode.value = "exchange"
+                default:
+                    self.viewModel.mode.value = ""
+                }
             })
             .disposed(by: disposeBag)
     }

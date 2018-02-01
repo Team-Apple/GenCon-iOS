@@ -37,7 +37,7 @@
         <!--NewAnnounce-->
         <scene sceneID="hpa-Di-ek0">
             <objects>
-                <viewController id="Kmz-Qs-LSi" sceneMemberID="viewController">
+                <viewController id="Kmz-Qs-LSi" customClass="NewAnnounceViewController" customModule="GenCon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4V3-Ug-vy4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,10 +108,22 @@
                         <viewLayoutGuide key="safeArea" id="QNR-az-q1w"/>
                     </view>
                     <navigationItem key="navigationItem" title="NewAnnounce" id="Azg-jV-7ni">
-                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="dw2-2j-6F2"/>
-                        <barButtonItem key="rightBarButtonItem" image="send" id="k8z-CV-7k5"/>
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="dw2-2j-6F2">
+                            <connections>
+                                <action selector="back:" destination="Kmz-Qs-LSi" id="mE4-8z-B4K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="send" id="k8z-CV-7k5">
+                            <connections>
+                                <action selector="save:" destination="Kmz-Qs-LSi" id="JaZ-br-36e"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="700"/>
+                    <connections>
+                        <outlet property="mode" destination="p4h-Vk-6Mg" id="6iZ-pj-d31"/>
+                        <outlet property="timing" destination="TTN-so-vVa" id="Lq6-38-EXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh8-Es-gxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

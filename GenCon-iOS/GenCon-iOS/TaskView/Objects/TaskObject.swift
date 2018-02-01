@@ -21,7 +21,7 @@ class TaskObject: Mappable {
     
     func mapping(map: Map) {
         eventTitle      <- map["title"]
-        startDateTime   <- map["start_at"]
+        startDateTime   <- map["start_from"]
         deadline     <- map["deadline"]
         memo            <- map["memo"]
         priority        <- map["priority"]

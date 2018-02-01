@@ -84,6 +84,18 @@ class Requests {
         }
     }
     
+    func saveAnnounce(params: [String: Any]) {
+        Alamofire.request(baseURL + "announcements", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .responseString { response in
+                print(response)
+                if response.response?.statusCode == 200 {
+                    print("save ok")
+                }else if response.response?.statusCode == 500 {
+                    print("error 500")
+                }
+        }
+    }
+    
     func deleteEvent(id: String) {
         Alamofire.request(baseURL + "events/" + id, method: .delete)
             .responseString { response in
