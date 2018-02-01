@@ -58,7 +58,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
 
         NotificationCenter.default.rx.notification(Notification.Name("fetchEventNotifi"), object: nil)
             .subscribe({ _ in
-                self.viewModel.updateDatas(date: self.selectedDateStr)
+                self.viewModel.updateDatas(fetchDate: self.selectedDateStr)
             })
             .disposed(by: disposeBag)
     }
@@ -67,7 +67,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
         selectedDate = date!
         self.isNavTapped = false
         view.viewWithTag(256)?.removeFromSuperview()
-        viewModel.updateDatas(date: selectedDateStr)
+        viewModel.updateDatas(fetchDate: selectedDateStr)
     }
     
     func setEmptyStateView() -> UIView {
@@ -84,7 +84,7 @@ class EventViewController: CalendarViewController, UITableViewDelegate {
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        viewModel.updateDatas(date: selectedDateStr)
+        viewModel.updateDatas(fetchDate: selectedDateStr)
         sender.endRefreshing()
     }
     
