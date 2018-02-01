@@ -11,7 +11,8 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-
+    let ud = UserDefaults()
+    let notifi = Notifi()
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -52,30 +53,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        //　通知設定に必要なクラスをインスタンス化
-        let trigger: UNNotificationTrigger
-        let content = UNMutableNotificationContent()
-        var notificationTime = DateComponents()
-        
-        // トリガー設定
-        notificationTime.year = 2018
-        notificationTime.month = 2
-        notificationTime.day = 1
-        notificationTime.hour = 12
-        notificationTime.minute = 0
-        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        
-        // 通知内容の設定
-        content.title = ""
-        content.body = "アプリを閉じました！"
-        content.sound = UNNotificationSound.default()
-        
-        // 通知スタイルを指定
-        let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
-        // 通知をセット
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        var events = [EventObject]()
+        if self.ud.object(forKey: "events") != nil {
+            events = NSKeyedUnarchiver.unarchiveObject(with: self.ud.object(forKey: "events") as! Data) as! [EventObject]
+            for i in events {
+                if i.isNotifi == false {
+                    notifi.set(text: i.eventTitle!, date: i.startDateTime!)
+                    i.isNotifi = true
+                }
+            }
+            let eventsdata = NSKeyedArchiver.archivedData(withRootObject: events)
+            self.ud.set(eventsdata, forKey: "events")
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
