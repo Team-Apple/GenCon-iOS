@@ -1,7 +1,124 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tw9-sQ-QWw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hHz-Hn-Hoe">
+            <objects>
+                <navigationController id="Tw9-sQ-QWw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="idf-mH-YsO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Kmz-Qs-LSi" kind="relationship" relationship="rootViewController" id="pku-2c-bYx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uk2-QK-71K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430" y="2037"/>
+        </scene>
+        <!--NewAnnounce-->
+        <scene sceneID="hpa-Di-ek0">
+            <objects>
+                <viewController id="Kmz-Qs-LSi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4V3-Ug-vy4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="ByX-pH-wV7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-86-c1E">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイミング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWp-RE-Jwz">
+                                                <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-so-vVa">
+                                                <rect key="frame" x="0.0" y="56" width="375" height="216"/>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09P-Mf-b2a">
+                                                <rect key="frame" x="20" y="302" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4h-Vk-6Mg">
+                                                <rect key="frame" x="0.0" y="328" width="375" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TTN-so-vVa" firstAttribute="top" secondItem="UWp-RE-Jwz" secondAttribute="bottom" constant="5" id="2Ck-tI-o9P"/>
+                                            <constraint firstAttribute="trailing" secondItem="p4h-Vk-6Mg" secondAttribute="trailing" id="46x-eh-jRU"/>
+                                            <constraint firstItem="UWp-RE-Jwz" firstAttribute="top" secondItem="jcy-86-c1E" secondAttribute="top" constant="30" id="FCT-nA-ftj"/>
+                                            <constraint firstAttribute="trailing" secondItem="UWp-RE-Jwz" secondAttribute="trailing" constant="20" id="Gf3-Vw-dUm"/>
+                                            <constraint firstItem="UWp-RE-Jwz" firstAttribute="leading" secondItem="jcy-86-c1E" secondAttribute="leading" constant="20" id="GpZ-Tj-Xkd"/>
+                                            <constraint firstAttribute="trailing" secondItem="09P-Mf-b2a" secondAttribute="trailing" constant="20" id="LvM-lz-qrN"/>
+                                            <constraint firstItem="09P-Mf-b2a" firstAttribute="top" secondItem="TTN-so-vVa" secondAttribute="bottom" constant="30" id="UjO-TC-30D"/>
+                                            <constraint firstItem="TTN-so-vVa" firstAttribute="leading" secondItem="jcy-86-c1E" secondAttribute="leading" id="gYt-IS-cNk"/>
+                                            <constraint firstItem="p4h-Vk-6Mg" firstAttribute="leading" secondItem="jcy-86-c1E" secondAttribute="leading" id="kzr-e4-Rl7"/>
+                                            <constraint firstAttribute="height" constant="636" id="mAW-gw-30w"/>
+                                            <constraint firstAttribute="trailing" secondItem="TTN-so-vVa" secondAttribute="trailing" id="qo8-Uh-H8H"/>
+                                            <constraint firstItem="09P-Mf-b2a" firstAttribute="leading" secondItem="jcy-86-c1E" secondAttribute="leading" constant="20" id="sPd-Bd-Ac4"/>
+                                            <constraint firstItem="p4h-Vk-6Mg" firstAttribute="top" secondItem="09P-Mf-b2a" secondAttribute="bottom" constant="5" id="yx1-JJ-1He"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jcy-86-c1E" secondAttribute="trailing" id="8Hl-3G-EJX"/>
+                                    <constraint firstItem="jcy-86-c1E" firstAttribute="leading" secondItem="ByX-pH-wV7" secondAttribute="leading" id="G1p-JS-Mho"/>
+                                    <constraint firstItem="jcy-86-c1E" firstAttribute="width" secondItem="ByX-pH-wV7" secondAttribute="width" id="Hz7-8A-Lxz"/>
+                                    <constraint firstAttribute="bottom" secondItem="jcy-86-c1E" secondAttribute="bottom" id="UHf-KB-oYe"/>
+                                    <constraint firstItem="jcy-86-c1E" firstAttribute="top" secondItem="ByX-pH-wV7" secondAttribute="top" id="VT7-PG-ncU"/>
+                                    <constraint firstItem="jcy-86-c1E" firstAttribute="top" secondItem="ByX-pH-wV7" secondAttribute="top" id="ZWF-UH-oqt"/>
+                                    <constraint firstAttribute="trailing" secondItem="jcy-86-c1E" secondAttribute="trailing" id="aPz-Cj-uuP"/>
+                                    <constraint firstItem="jcy-86-c1E" firstAttribute="leading" secondItem="ByX-pH-wV7" secondAttribute="leading" id="edl-Cw-hDO"/>
+                                    <constraint firstAttribute="bottom" secondItem="jcy-86-c1E" secondAttribute="bottom" id="rLe-v9-bAC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QNR-az-q1w" firstAttribute="trailing" secondItem="ByX-pH-wV7" secondAttribute="trailing" id="IfI-1n-6J0"/>
+                            <constraint firstItem="QNR-az-q1w" firstAttribute="bottom" secondItem="ByX-pH-wV7" secondAttribute="bottom" id="Iql-jV-DmW"/>
+                            <constraint firstItem="ByX-pH-wV7" firstAttribute="leading" secondItem="QNR-az-q1w" secondAttribute="leading" id="Mr7-Dr-63w"/>
+                            <constraint firstItem="ByX-pH-wV7" firstAttribute="top" secondItem="QNR-az-q1w" secondAttribute="top" id="fkc-Ew-2pq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QNR-az-q1w"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NewAnnounce" id="Azg-jV-7ni">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="dw2-2j-6F2"/>
+                        <barButtonItem key="rightBarButtonItem" image="send" id="k8z-CV-7k5"/>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh8-Es-gxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="2036"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="send" width="20" height="20"/>
+    </resources>
 </document>

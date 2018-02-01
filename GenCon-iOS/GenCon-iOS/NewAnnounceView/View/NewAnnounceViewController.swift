@@ -12,13 +12,8 @@ import RxCocoa
 import Material
 
 class NewAnnounceViewController: UIViewController {
-    @IBOutlet weak var eventTitle: TextField!
-    @IBOutlet weak var memo: TextField!
-    @IBOutlet weak var startDate: UIDatePicker!
-    @IBOutlet weak var startTime: UIDatePicker!
-    @IBOutlet weak var endDate: UIDatePicker!
-    @IBOutlet weak var endTime: UIDatePicker!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var timing: UIPickerView!
+    @IBOutlet weak var mode: UIPickerView!
 
     var viewModel = NewTaskViewModel()
     var disposeBag = DisposeBag()
@@ -75,7 +70,7 @@ class NewAnnounceViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.view = nil
-        NotificationCenter.default.post(name: Notification.Name("fetchEventNotifi"), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name("fetchAnnounceNotifi"), object: nil, userInfo: nil)
     }
 
 }

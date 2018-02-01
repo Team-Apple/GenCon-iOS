@@ -75,7 +75,7 @@ class NewTaskViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.view = nil
-        NotificationCenter.default.post(name: Notification.Name("fetchEventNotifi"), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name("fetchTaskNotifi"), object: nil, userInfo: nil)
     }
 
 }

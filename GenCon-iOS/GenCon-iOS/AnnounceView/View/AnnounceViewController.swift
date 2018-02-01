@@ -57,6 +57,12 @@ class AnnounceViewController: UIViewController ,UITableViewDelegate {
                 self?.tableView.deselectRow(at: indexPath, animated: true)
             })
             .disposed(by: disposeBag)
+        
+        NotificationCenter.default.rx.notification(Notification.Name("fetchAnnounceNotifi"), object: nil)
+            .subscribe({ _ in
+                self.viewModel.updateDatas()
+            })
+            .disposed(by: disposeBag)
     }
     
     func setEmptyStateView() -> UIView {
